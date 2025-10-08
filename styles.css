@@ -1,0 +1,189 @@
+/* Global color tokens and simple utilities */
+:root {
+  --deep-blue: var(--novartis-deep-blue, #002068);
+  --cool-gray: var(--novartis-cool-gray, #f2f2f4);
+}
+
+@font-face {
+  font-family: "Volta Modern Text";
+  src: url("/fonts/VoltaModernText-55Roman_3870789563.otf") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Volta Modern Text";
+  src: url("/fonts/VoltaModernText-75Bold_1660028224.otf") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter-VariableFont_opsz,wght.ttf") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  /* overflow: hidden; */
+}
+
+.background-deep-blue {
+  background-color: var(--deep-blue);
+}
+
+.text-cool-gray {
+  color: var(--cool-gray);
+}
+
+h1 {
+  color: var(--novartis-cool-gray, #f2f2f4);
+  font-family: "Volta Modern Text";
+  font-size: 3.5vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 159.544%;
+}
+
+h2 {
+  color: var(--novartis-cool-gray, #f2f2f4);
+  font-family: "Volta Modern Text";
+  font-size: 2vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 283.634%;
+}
+
+.custom-button {
+  background-color: var(--deep-blue);
+  color: var(--novartis-cool-gray, #f2f2f4);
+  font-family: "Inter";
+  font-size: 1.5vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 1vw 4vw;
+  position: relative;
+  z-index: 30000 !important;
+  transition: all 0.2s ease-in-out, color 0.2s ease-in-out,
+    transform 0.3s ease-in-out;
+}
+
+.button-div:hover .custom-button {
+  background-color: transparent;
+  color: var(--deep-blue);
+  transform: rotate(1.878deg);
+}
+
+.custom-button svg {
+  margin-right: -1vw;
+  margin-left: 0.5vw;
+  width: 2.5vw;
+}
+
+.button-div .custom-button svg * {
+  transition: all 0.2s ease-in-out, color 0.2s ease-in-out,
+    transform 0.3s ease-in-out;
+}
+
+.button-div:hover .custom-button svg * {
+  fill: var(--deep-blue);
+}
+
+.button-div {
+  position: relative;
+  width: 17.5vw;
+  border-radius: 100vw;
+}
+
+.button-div:hover .background-gradient {
+  opacity: 1;
+}
+
+.background-gradient {
+  opacity: 0;
+  z-index: 3 !important;
+  height: 100%;
+  width: 17.5vw;
+  position: absolute;
+  top: 0px;
+  border-radius: 100vw;
+  background: var(
+    --novartis-orange-gradient,
+    linear-gradient(
+      225deg,
+      var(--novartis-amber, #ffc100) 0%,
+      var(--novartis-coral, #ff585d) 100%
+    )
+  );
+  transform: rotate(1.878deg);
+  color: var(--deep-blue);
+  transition: all 0.2s ease-in-out, color 0.2s ease-in-out,
+    transform 0.3s ease-in-out;
+}
+
+.background-div {
+  background: var(
+    --novartis-orange-gradient,
+    linear-gradient(
+      225deg,
+      var(--novartis-amber, #ffc100) 0%,
+      var(--novartis-coral, #ff585d) 100%
+    )
+  );
+}
+
+.grid-30-60 {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  gap: 0px;
+}
+
+.styling-div {
+  border: 1px solid red;
+  background-color: white;
+  opacity: 0;
+  z-index: 2 !important;
+  height: 100%;
+  width: 17.5vw;
+  position: absolute;
+  top: 0px;
+  border-radius: 100vw;
+
+  color: var(--deep-blue);
+  transition: all 0.2s ease-in-out, color 0.2s ease-in-out,
+    transform 0.3s ease-in-out;
+}
+
+.button-div:hover .styling-div {
+  opacity: 1;
+  transform: rotate(-1.878deg) scale(1.02);
+}
+
+.styling-div-2 {
+  background-color: white;
+  border: 1px solid red;
+
+  opacity: 0;
+  z-index: 1 !important;
+  height: 100%;
+  width: 17.5vw;
+  position: absolute;
+  top: 0px;
+  border-radius: 100vw;
+
+  color: var(--deep-blue);
+  transition: all 0.2s ease-in-out, color 0.2s ease-in-out,
+    transform 0.3s ease-in-out;
+}
+
+.button-div:hover .styling-div-2 {
+  opacity: 1;
+  transform: rotate(-5.842deg) scale(1.02);
+}
