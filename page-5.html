@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+                <script>
+              document.addEventListener('DOMContentLoaded', function () {
+              document.querySelectorAll('.dropdown-container').forEach(function (container) {
+                var arrow = container.querySelector('.arrow-wrapper');
+                var content = container.querySelector('.dropdown-content');
+                var dropdownEl = container.querySelector('.dropdown');
+                if (!arrow || !content) return;
+                arrow.style.cursor = 'pointer';
+                arrow.addEventListener('click', function () {
+                content.classList.toggle('disabled');
+                if (dropdownEl) dropdownEl.classList.toggle('active');
+                });
+              });
+              });
+            </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page 5</title>
+
+    <link href="tailwind.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+    <script src="footer.js" defer></script>
+    <style></style>
+  </head>
+  <body>
+    <div
+      style="
+        background-color: #f2f2f4;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 85.5vh;
+        /* margin-bottom: -9.5vw; */
+      "
+    >
+      <div
+        style="
+          background-color: #002068;
+          padding: 5vw;
+          gap: 0.5vw;
+          position: relative;
+          z-index: 1;
+
+        "
+        class="flex flex-col justify-between"
+      >
+        <div>
+          <h2
+            class="m-0 p-0 text-light"
+            style="
+              color: #f2f2f4;
+              font-size: 1.2vw;
+              border-radius: 100vw;
+              padding: 0.1vw 0.8vw 0vw 0.8vw;
+              width: max-content;
+              font-weight: 100;
+              background-color: #ff585d;
+              font-weight: bold;
+              margin-bottom: 1vw;
+            "
+          >
+            Assess, Assemble, and Act
+          </h2>
+          <h1
+            class="volta-modern-text m-0 p-0 w-full text-light"
+            style="color: #f2f2f4"
+          >
+            <b style="font-weight: bold">Fintech</b> Partnership
+          </h1>
+          <h2
+            class="volta-modern-text m-0 p-0"
+            style="
+              color: #f2f2f4;
+              font-size: 1.3vw;
+              font-weight: 100;
+              line-height: 1.8vw;
+            "
+          >
+            Strong value proposition complemented by solving for cash-flow for
+            the patients can enhance access.
+          </h2>
+        </div>
+        <div>
+          <p
+            style="
+              font-size: 1.2vw;
+              color: #f2f2f4;
+              line-height: 1.5vw;
+              font-weight: light !important;
+              display: flex;
+              flex-direction: column;
+              border-bottom: 1px solid #f2f2f4;
+              padding: 2vw 0vw;
+            "
+          >
+            <b>Key Consideration</b><br />Please ensure the “most recent”
+            information is provided to the patients.
+          </p>
+          <p
+            style="
+              font-size: 1.2vw;
+              color: #f2f2f4;
+              line-height: 1.5vw;
+              font-weight: light !important;
+              display: flex;
+              flex-direction: column;
+              border-bottom: 1px solid #f2f2f4;
+              padding: 2vw 0vw;
+            "
+          >
+            Please ensure all the appropriate disclaimers aligned with local ERC
+            and legal team are included in any material shared with external
+            stakeholders.
+          </p>
+          <p
+            style="
+              font-size: 1.2vw;
+              color: #f2f2f4;
+              line-height: 1.5vw;
+              font-weight: light !important;
+              display: flex;
+              flex-direction: column;
+              border-bottom: 1px solid #f2f2f4;
+              padding: 2vw 0vw;
+            "
+          >
+            No access to patient identifiable data for Novartis team.
+          </p>
+          <p
+            style="
+              font-size: 1.2vw;
+              color: #f2f2f4;
+              line-height: 1.5vw;
+              font-weight: light !important;
+              display: flex;
+              flex-direction: column;
+              border-bottom: 1px solid #f2f2f4;
+              padding: 2vw 0vw;
+            "
+          >
+            Robust assessment with ERC and Patient Safety on POP classification.
+          </p>
+        </div>
+      </div>
+
+      <div
+        style="padding: 5vw"
+        class="flex flex-col h-full justify-around"
+        "
+      >
+        <div
+          class="flex flex-row justify-center items-center relative"
+          style="gap: 1vw"
+        >
+          <h2 class="m-0 p-0" style="color: #002068; font-size: 1.3vw">
+            Checklist for Partner Selection
+          </h2>
+          <div
+            class="h-full"
+            style="width: 1px; background-color: #002068"
+          ></div>
+          <a href="page-2.html" class="button-div check-here">
+            <div class="background-gradient"></div>
+            <div
+              class="flex justify-center items-center border rounded-full w-min custom-button"
+            >
+              Check here
+              <svg
+                width="34"
+                height="34"
+                viewBox="0 0 34 34"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M34 17C34 26.3889 26.3889 34 17 34C7.61113 34 0 26.3889 0 17C0 7.61113 7.61113 0 17 0C26.3889 0 34 7.61113 34 17ZM15.0336 26.0014L27.6465 13.3885C28.0748 12.9602 28.0748 12.2657 27.6465 11.8374L26.0955 10.2864C25.6672 9.85801 24.9727 9.85801 24.5444 10.2864L14.2581 20.5726L9.45563 15.7702C9.02734 15.3419 8.33288 15.3419 7.90452 15.7702L6.35348 17.3212C5.92519 17.7495 5.92519 18.444 6.35348 18.8723L13.4825 26.0013C13.9109 26.4297 14.6053 26.4297 15.0336 26.0014Z"
+                  fill="#F2F2F4"
+                />
+              </svg>
+            </div>
+            <div class="styling-div"></div>
+            <div class="styling-div-2"></div>
+          </a>
+        </div>
+        <div>
+<div class="dropdown-container">
+            <div
+              class="flex flex-row justify-between dropdown items-center"
+              style="
+                gap: 1vw;
+                border-bottom: 0.1vw solid #002068;
+                padding: 1vw;
+              "
+            >
+              <div class="flex flex-row align-center items-center" style="gap: 1vw">
+                <style>
+                  /* swap magnifier on .dropdown hover */
+                  .dropdown .mag-wrapper {
+                    position: relative;
+                    width: 3vw;
+                    height: 3vw;
+                    flex-shrink: 0;
+  
+                  }
+                  .dropdown .mag-wrapper img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    transition: opacity 0.4s ease-in-out;
+                    display: block;
+                  }
+                  .dropdown .mag-wrapper .mag-dark { opacity: 1; }
+                  .dropdown .mag-wrapper .mag-light { opacity: 0; }
+                  .dropdown:hover .mag-wrapper .mag-dark { opacity: 0; }
+                  .dropdown:hover .mag-wrapper .mag-light { opacity: 1; }
+                </style>
+  
+                <div class="mag-wrapper" aria-hidden="true">
+                  <img src="/assets/maginifier.svg" class="mag-dark" alt="" />
+                  <img src="/assets/maginifier-light.svg" class="mag-light" alt="" />
+                </div>
+  
+                <p
+                  style="
+                    font-size: 1.7vw;
+                    line-height: 2vw;
+                    font-weight: light !important;
+                  "
+                >
+                  <b>Assess</b><br />
+                  The Landscape
+                </p>
+  
+                
+              </div>
+              <div class="arrow-wrapper" aria-hidden="true">
+                <img src="/assets/dropdown-blue.svg" class="arrow-dark" alt="arrow down" />
+                <img src="/assets/dropdown-light.svg" class="arrow-light" alt="arrow down (hover)" />
+              </div>
+            </div>
+            <div class="dropdown-content disabled">
+              <p>To assess the external landscape , opportunity size and consolidate all necessary information to maximize the alternate funding model</p>
+              <a href="#" class="learn-more">learn more</a>
+            </div>
+
+
+</div>
+        </div>
+      </div>
+    </div>
+    <site-footer
+      style="position: relative; z-index: 100"
+      next-text="Next (Alternative Funding)"
+      next-href="page-4.html"
+    ></site-footer>
+  </body>
+</html>

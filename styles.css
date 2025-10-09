@@ -343,3 +343,121 @@ p {
   background-color: #ff585d;
   color: var(--cool-gray);
 }
+
+.check-here .custom-button {
+  background-color: #ff585d;
+  color: var(--cool-gray);
+}
+
+.check-here div {
+  width: 18vw;
+  flex-shrink: 0;
+}
+
+.dropdown {
+  color: #002068;
+  transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.dropdown:hover,
+.dropdown.active {
+  background-color: #002068;
+}
+
+.dropdown:hover,
+.dropdown.active {
+  color: var(--cool-gray);
+  fill: var(--cool-gray);
+}
+
+.dropdown-container .dropdown-content {
+  background-color: #002068;
+  color: var(--cool-gray);
+  padding: 1vw 1vw 1vw 5.2vw;
+  max-height: 20vw;
+  transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.dropdown-container .dropdown-content.disabled {
+  max-height: 0vw;
+  overflow: hidden;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.dropdown-container .dropdown-content a {
+  color: #ff585d;
+  font-size: 0.8vw;
+  text-decoration: underline;
+}
+
+.dropdown-container .dropdown-content.disabled * {
+  opacity: 0;
+}
+
+.dropdown-container .dropdown-content * {
+  opacity: 1;
+  transition: all 0.2s ease-in-out, opacity 0.2s ease-in-out 0.1s;
+}
+
+/* swap arrow on .dropdown hover */
+.dropdown .arrow-wrapper {
+  position: relative;
+  width: 3vw;
+  height: 3vw;
+  flex-shrink: 0;
+}
+.dropdown .arrow-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.25s ease-in-out;
+  display: block;
+}
+.dropdown .arrow-wrapper .arrow-dark {
+  opacity: 1;
+}
+.dropdown .arrow-wrapper .arrow-light {
+  opacity: 0;
+}
+.dropdown:hover .arrow-wrapper .arrow-dark,
+.dropdown.active .arrow-wrapper .arrow-dark {
+  opacity: 0;
+}
+.dropdown:hover .arrow-wrapper .arrow-light,
+.dropdown.active .arrow-wrapper .arrow-light {
+  opacity: 1;
+}
+
+/* swap magnifier on .dropdown hover or when toggled active */
+.dropdown .mag-wrapper {
+  position: relative;
+  width: 3vw;
+  height: 3vw;
+  flex-shrink: 0;
+}
+.dropdown .mag-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.4s ease-in-out;
+  display: block;
+}
+.dropdown .mag-wrapper .mag-dark {
+  opacity: 1;
+}
+.dropdown .mag-wrapper .mag-light {
+  opacity: 0;
+}
+.dropdown:hover .mag-wrapper .mag-dark,
+.dropdown.active .mag-wrapper .mag-dark {
+  opacity: 0;
+}
+.dropdown:hover .mag-wrapper .mag-light,
+.dropdown.active .mag-wrapper .mag-light {
+  opacity: 1;
+}
