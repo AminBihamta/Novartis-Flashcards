@@ -224,3 +224,122 @@ p {
 .next-page-button:hover svg path[fill] {
   fill: var(--cool-gray);
 }
+
+.funding-card {
+  gap: 1vw;
+  background-color: #ffc100;
+  border-radius: 1vw;
+  padding: 1vw 3vw 2vw 3vw;
+  z-index: 1;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  border: 2px solid var(--novartis-coral, #ff585d);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.red-funding-card .funding-card {
+  background-color: #ff585d;
+}
+
+.blue-funding-card .funding-card {
+  background-color: #0761a7;
+}
+
+.funding-card-parent:hover .funding-card {
+  background-color: #ff6e4a;
+  transform: rotate(1.702deg);
+  transform-origin: center 70%;
+  box-shadow: 0 0 24.2px 0 rgba(255, 88, 93, 0.7);
+}
+
+.funding-card-styling-1 {
+  border-radius: 1vw;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+
+  border: 2px solid var(--novartis-coral, #ff585d);
+  background-color: #002068;
+  z-index: 11;
+}
+
+.funding-card-parent:hover .funding-card-styling-1 {
+  transform: rotate(-7.365deg);
+
+  transform-origin: center 70%;
+}
+
+.funding-card-styling-2 {
+  border-radius: 1vw;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+
+  border: 2px solid var(--novartis-coral, #ff585d);
+  background-color: #002068;
+  z-index: 12;
+}
+
+.funding-card-parent:hover .funding-card-styling-2 {
+  transform: rotate(-3.487deg);
+  transform-origin: center 70%;
+}
+
+.funding-card img {
+  width: 10vw;
+  height: auto;
+}
+
+.funding-card h2 {
+  color: #002068;
+  font-weight: 100;
+  text-align: center;
+  line-height: 2.5vw;
+}
+
+.funding-card h2 b {
+  font-weight: 700;
+}
+
+.funding-card a {
+  color: #ff585d !important;
+  padding: 0.7vw 3vw;
+  background-color: var(--cool-gray);
+  border-radius: 100vw;
+  font-weight: bold;
+  font-size: 1.1vw;
+  margin-top: 2vw;
+}
+
+.blue-funding-card h2,
+.red-funding-card h2 {
+  color: var(--cool-gray);
+}
+
+.implemented-as .text-container {
+  background-color: var(--deep-blue);
+  width: max-content;
+  padding: 0.5vw 0.5vw 0.5vw 1vw;
+  gap: 0.5vw;
+}
+
+.implemented-as .text-container span {
+  color: var(--cool-gray);
+  font-size: 0.8vw;
+}
+
+.implemented-as .text-container a {
+  color: #ff585d;
+  background-color: #f2f2f4;
+  border-radius: 100vw;
+  padding: 0.3vw 1.6vw;
+  font-weight: bold;
+  font-size: 0.6vw;
+  transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.implemented-as .text-container a:hover {
+  background-color: #ff585d;
+  color: var(--cool-gray);
+}
