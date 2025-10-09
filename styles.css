@@ -25,6 +25,10 @@
   font-style: normal;
 }
 
+* {
+  font-family: "Volta Modern Text";
+}
+
 html,
 body {
   width: 100vw;
@@ -57,7 +61,7 @@ h2 {
   font-size: 2vw;
   font-style: normal;
   font-weight: 700;
-  line-height: 283.634%;
+  line-height: 3vw;
 }
 
 .custom-button {
@@ -108,7 +112,7 @@ h2 {
 
 .background-gradient {
   opacity: 0;
-  z-index: 3 !important;
+  z-index: 100 !important;
   height: 100%;
   width: 17.5vw;
   position: absolute;
@@ -186,4 +190,37 @@ h2 {
 .button-div:hover .styling-div-2 {
   opacity: 1;
   transform: rotate(-5.842deg) scale(1.02);
+}
+
+p {
+  font-size: 0.95vw;
+}
+
+.next-page-button {
+  font-size: 1.1vw !important;
+  color: #002068;
+  background-color: #ffc100;
+  padding: 0.8vw 1.2vw;
+  flex-shrink: 0;
+  gap: 0.5vw;
+  border: 0.1vw solid #002068;
+  transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.next-page-button:hover {
+  background-color: var(--deep-blue);
+  color: var(--cool-gray);
+}
+
+.next-page-button svg path[stroke],
+.next-page-button svg path[fill] {
+  transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.next-page-button:hover svg path[stroke] {
+  stroke: var(--cool-gray);
+}
+
+.next-page-button:hover svg path[fill] {
+  fill: var(--cool-gray);
 }
