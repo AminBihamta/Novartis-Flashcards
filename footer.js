@@ -18,7 +18,7 @@ class SiteFooter extends HTMLElement {
 
     this.innerHTML = `
       <footer
-        style="padding: 3vw; border-top: 1px solid #002068; gap: 1vw"
+        style="padding: 3vw; border-top: 1px solid #002068; gap: 1vw; z-index: 100; !important"
         class="w-full text-center flex flex-row justify-evenly items-center"
       >
         <p
@@ -36,7 +36,7 @@ class SiteFooter extends HTMLElement {
           country legal team as early as possible in the planning stage to ensure
           the models discussed are legally allowed and feasible in your country.
         </p>
-        <span style="color: #002068; font-size: 0.7vw; width: 5.9vw; flex-shrink: 0">*2025 target rate</span>
+
 
         <button type="button" onclick="history.back()" aria-label="Go back" class="flex" style="gap: 0.5vw">
           <svg width="1.7vw" height="1.7vw" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
