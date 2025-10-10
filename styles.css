@@ -487,6 +487,9 @@ h3.col-header{
   line-height: 100%;
   margin-left: 40px;
 }
+.col-header-no-img{
+  margin-left: 0 !important;
+}
 ul.checklist{
   padding-left: 0;
 }
@@ -497,8 +500,16 @@ ul.checklist li{
   align-items: center;
   color: var(--deep-blue)
 }
+ul.checklist.text-white li{
+  color: #FFFFFF;
+  border-bottom-color: #FFFFFF;
+}
 ul.checklist .checklist-icon{
   margin-right: 16px;
+}
+ul.checklist-no-img li{
+  font-size: 14px;
+  padding: 10px 0;
 }
 .checklist-icon{
   width: 24px;
