@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+                <script>
+              document.addEventListener('DOMContentLoaded', function () {
+              document.querySelectorAll('.dropdown-container').forEach(function (container) {
+                var arrow = container.querySelector('.arrow-wrapper');
+                var content = container.querySelector('.dropdown-content');
+                var dropdownEl = container.querySelector('.dropdown');
+                if (!arrow || !content) return;
+                arrow.style.cursor = 'pointer';
+                arrow.addEventListener('click', function () {
+                content.classList.toggle('disabled');
+                if (dropdownEl) dropdownEl.classList.toggle('active');
+                });
+              });
+              });
+            </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page 15</title>
+
+    <link href="tailwind.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+    <script src="footer.js" defer></script>
+    <style></style>
+  </head>
+  <body>
+    <div
+      style="
+        background-color: #f2f2f4;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 85.5vh;
+        /* margin-bottom: -9.5vw; */
+      "
+    >
+      <div
+        style="
+          background-color: #002068;
+          padding: 5vw;
+          gap: 0.5vw;
+          position: relative;
+          z-index: 1;
+
+        "
+        class="flex flex-col justify-between"
+      >
+        <div>
+          <h2
+            class="m-0 p-0 text-light"
+            style="
+              color: #f2f2f4;
+              font-size: 1.2vw;
+              border-radius: 100vw;
+              padding: 0.1vw 0.8vw 0vw 0.8vw;
+              width: max-content;
+              font-weight: 100;
+              background-color: #ff585d;
+              font-weight: bold;
+              margin-bottom: 1vw;
+            "
+          >
+            Assess, Assemble, and Act
+          </h2>
+          <h1
+            class="volta-modern-text m-0 p-0 w-full text-light"
+            style="color: #f2f2f4"
+          >
+            <b style="font-weight: bold">Special</b> Funds
+          </h1>
+          <h2
+            class="volta-modern-text m-0 p-0"
+            style="
+              color: #f2f2f4;
+              font-size: 1.3vw;
+              font-weight: 100;
+              line-height: 1.8vw;
+            "
+          >
+            Understand the availability of any other  public funding source, while the reimbursement is under process.
+          </h2>
+        </div>
+        <div>
+          <p
+            style="
+              color: #f2f2f4;
+              line-height: 1.5vw;
+              font-weight: light !important;
+              display: flex;
+              flex-direction: column;
+              border-bottom: 1px solid #f2f2f4;
+              padding: 16px 0;
+            "
+          >
+            <b>Key Consideration</b><br />Please ensure the “most recent” information is provided to the patients.
+          </p>
+          <p
+            style="
+              color: #f2f2f4;
+              line-height: 1.5vw;
+              font-weight: light !important;
+              display: flex;
+              flex-direction: column;
+              border-bottom: 1px solid #f2f2f4;
+              padding: 16px 0;
+            "
+          >
+            Please ensure all the appropriate disclaimers aligned with local ERC and legal team are included in any material shared with external stakeholders.
+          </p>
+          <p
+            style="
+              color: #f2f2f4;
+              line-height: 1.5vw;
+              font-weight: light !important;
+              display: flex;
+              flex-direction: column;
+              border-bottom: 1px solid #f2f2f4;
+              padding: 16px 0;
+            "
+          >
+            Comprehensive service agreement with External Service Provider aligned with legal and ERC teams.
+          </p>
+          <p
+            style="
+              color: #f2f2f4;
+              line-height: 1.5vw;
+              font-weight: light !important;
+              display: flex;
+              flex-direction: column;
+              border-bottom: 1px solid #f2f2f4;
+              padding: 16px 0;
+            "
+          >
+            Prepare SOP – Do’s and Don’t for external service provider head counts.
+          </p>
+        </div>
+      </div>
+
+      <div
+        style="padding: 5vw; gap: 0.5vw;"
+        class="flex flex-col h-full justify-around"
+        "
+      >
+        <div>
+<div class="dropdown-container">
+            <div
+              class="flex flex-row justify-between dropdown items-center"
+              style="
+                gap: 1vw;
+                border-bottom: 0.1vw solid #002068;
+                padding: 1.5vw 1vw;
+              "
+            >
+              <div class="flex flex-row align-center items-center" style="gap: 1vw">
+                <style>
+                  /* swap magnifier on .dropdown hover */
+                  .dropdown .mag-wrapper {
+                    position: relative;
+                    width: 3vw;
+                    height: 3vw;
+                    flex-shrink: 0;
+  
+                  }
+                  .dropdown .mag-wrapper img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    transition: opacity 0.4s ease-in-out;
+                    display: block;
+                  }
+                  .dropdown .mag-wrapper .mag-dark { opacity: 1; }
+                  .dropdown .mag-wrapper .mag-light { opacity: 0; }
+                  .dropdown:hover .mag-wrapper .mag-dark { opacity: 0; }
+                  .dropdown:hover .mag-wrapper .mag-light { opacity: 1; }
+                </style>
+  
+                <div class="mag-wrapper" aria-hidden="true">
+                  <img src="./assets/maginifier.svg" class="mag-dark" alt="" />
+                  <img src="./assets/maginifier-light.svg" class="mag-light" alt="" />
+                </div>
+  
+                <p
+                  style="
+                    font-size: 1.7vw;
+                    line-height: 2vw;
+                    font-weight: light !important;
+                  "
+                >
+                  <b>Assess</b><br />
+                  The Landscape
+                </p>
+  
+                
+              </div>
+              <div class="arrow-wrapper" aria-hidden="true">
+                <img src="./assets/dropdown-blue.svg" class="arrow-dark" alt="arrow down" />
+                <img src="./assets/dropdown-light.svg" class="arrow-light" alt="arrow down (hover)" />
+              </div>
+            </div>
+            <div class="dropdown-content disabled">
+              <p>To assess the external landscape , opportunity size and consolidate all necessary information to maximize the alternate funding model</p>
+              <a href="#" class="learn-more">learn more</a>
+            </div>
+
+
+</div>
+<div class="dropdown-container">
+            <div
+              class="flex flex-row justify-between dropdown items-center"
+              style="
+                gap: 1vw;
+                border-bottom: 0.1vw solid #002068;
+                padding: 1.5vw 1vw;
+              "
+            >
+              <div class="flex flex-row align-center items-center" style="gap: 1vw">
+                <style>
+                  /* swap magnifier on .dropdown hover */
+                  .dropdown .mag-wrapper {
+                    position: relative;
+                    width: 3vw;
+                    height: 3vw;
+                    flex-shrink: 0;
+  
+                  }
+                  .dropdown .mag-wrapper img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    transition: opacity 0.4s ease-in-out;
+                    display: block;
+                  }
+                  .dropdown .mag-wrapper .mag-dark { opacity: 1; }
+                  .dropdown .mag-wrapper .mag-light { opacity: 0; }
+                  .dropdown:hover .mag-wrapper .mag-dark { opacity: 0; }
+                  .dropdown:hover .mag-wrapper .mag-light { opacity: 1; }
+                </style>
+  
+                <div class="mag-wrapper" aria-hidden="true">
+                  <img src="./assets/Group 111.svg" class="mag-dark" alt="" />
+                  <img src="./assets/maginifier-light.svg" class="mag-light" alt="" />
+                </div>
+  
+                <p
+                  style="
+                    font-size: 1.7vw;
+                    line-height: 2vw;
+                    font-weight: light !important;
+                  "
+                >
+                  <b>Assemble</b><br />
+Activation of plan
+                </p>
+  
+                
+              </div>
+              <div class="arrow-wrapper" aria-hidden="true">
+                <img src="./assets/dropdown-blue.svg" class="arrow-dark" alt="arrow down" />
+                <img src="./assets/dropdown-light.svg" class="arrow-light" alt="arrow down (hover)" />
+              </div>
+            </div>
+            <div class="dropdown-content disabled">
+              <p>Designing strategy, building capability, risk mitigation and implementation plan with milestone tracking.</p>
+              <a href="#" class="learn-more">learn more</a>
+            </div>
+
+
+</div>
+<div class="dropdown-container">
+            <div
+              class="flex flex-row justify-between dropdown items-center"
+              style="
+                gap: 1vw;
+                border-bottom: 0.1vw solid #002068;
+                padding: 1.5vw 1vw;
+              "
+            >
+              <div class="flex flex-row align-center items-center" style="gap: 1vw">
+                <style>
+                  /* swap magnifier on .dropdown hover */
+                  .dropdown .mag-wrapper {
+                    position: relative;
+                    width: 3vw;
+                    height: 3vw;
+                    flex-shrink: 0;
+  
+                  }
+                  .dropdown .mag-wrapper img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    transition: opacity 0.4s ease-in-out;
+                    display: block;
+                  }
+                  .dropdown .mag-wrapper .mag-dark { opacity: 1; }
+                  .dropdown .mag-wrapper .mag-light { opacity: 0; }
+                  .dropdown:hover .mag-wrapper .mag-dark { opacity: 0; }
+                  .dropdown:hover .mag-wrapper .mag-light { opacity: 1; }
+                </style>
+  
+                <div class="mag-wrapper" aria-hidden="true">
+                  <img src="./assets/Group 112.svg" class="mag-dark" alt="" />
+                  <img src="./assets/maginifier-light.svg" class="mag-light" alt="" />
+                </div>
+  
+                <p
+                  style="
+                    font-size: 1.7vw;
+                    line-height: 2vw;
+                    font-weight: light !important;
+                  "
+                >
+                
+
+                  <b>Act</b><br />
+Design an Efficient KPI framework
+                </p>
+  
+                
+              </div>
+              <div class="arrow-wrapper" aria-hidden="true">
+                <img src="./assets/dropdown-blue.svg" class="arrow-dark" alt="arrow down" />
+                <img src="./assets/dropdown-light.svg" class="arrow-light" alt="arrow down (hover)" />
+              </div>
+            </div>
+            <div class="dropdown-content disabled">
+              <p>Understanding of leading & lagging indicators; assigning actionable KPIs's.</p>
+              <a href="#" class="learn-more">learn more</a>
+            </div>
+
+
+</div>
+        </div>
+      </div>
+    </div>
+    <site-footer
+      style="position: relative; z-index: 100"
+      next-text="Next (Asses the Landscape)"
+      next-href="page-16.html"
+    ></site-footer>
+  </body>
+</html>
