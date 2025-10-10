@@ -96,7 +96,11 @@ h2 {
     transform 0.3s ease-in-out;
 }
 
-.button-div:hover .custom-button svg * {
+.button-div:hover .custom-button svg path[stroke] {
+  stroke: var(--deep-blue);
+}
+/* Keep filled shapes (e.g., circle background) light on hover */
+.button-div:hover .custom-button svg path[fill] {
   fill: var(--deep-blue);
 }
 
@@ -460,4 +464,182 @@ p {
 .dropdown:hover .mag-wrapper .mag-light,
 .dropdown.active .mag-wrapper .mag-light {
   opacity: 1;
+}
+
+.orange-box-hover-1,
+.orange-box-hover-2 {
+  transition: all 0.3s ease-in-out;
+  background-color: #002068;
+  border: 0.1vw solid var(--novartis-coral, #ff585d);
+  transform-origin: bottom center;
+}
+
+.orange-box-outter:hover .orange-box-hover-1 {
+  transform: rotate(2.928deg);
+  box-shadow: 0 0 23.08px 0 rgba(255, 88, 93, 0.7);
+}
+
+.orange-box-outter:hover .orange-box-hover-2 {
+  transform: rotate(7.085deg);
+  box-shadow: 0 0 23.08px 0 rgba(255, 88, 93, 0.7);
+}
+
+.orange-box-outter {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.orange-box-outter .orange-box {
+  transition: all 0.3s ease-in-out;
+  place-content: space-between;
+}
+
+.orange-box-outter .orange-box img {
+  margin-bottom: 0.8vw !important;
+}
+
+.orange-box-outter:hover .orange-box {
+  transform: rotate(-2.928deg);
+}
+
+.orange-box-outter:hover {
+  margin: 0 2vw 0 0vw;
+}
+
+.orange-box-content h3 {
+  font-size: 1.2vw;
+  font-weight: bold !important;
+  color: #f2f2f4;
+}
+
+.orange-box-content p {
+  font-size: 0.9vw;
+  line-height: 1.2vw;
+  padding: 0.5vw 0;
+  border-bottom: 1px solid #f2f2f4;
+  color: #f2f2f4;
+}
+
+.orange-box-content {
+  margin-bottom: 0.5vw;
+  max-height: 15vw;
+  padding-bottom: 3vw;
+  overflow-y: scroll;
+  padding-top: 2vw;
+  /* hide scrollbar but keep scrollable content */
+}
+
+.orange-box-content {
+  -ms-overflow-style: none !important; /* IE and Edge */
+  scrollbar-width: none !important; /* Firefox */
+}
+.orange-box-content::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+}
+.orange-box-content::-webkit-scrollbar-thumb {
+  background: transparent !important;
+}
+
+.orange-box {
+  background: var(
+    --novartis-orange-gradient,
+    linear-gradient(
+      225deg,
+      var(--novartis-amber, #ffc100) 0%,
+      var(--novartis-coral, #ff585d) 100%
+    )
+  );
+  padding: 1vw 2vw;
+  border-radius: 0.5vw;
+  z-index: 6;
+}
+
+.expanded .orange-box {
+  background: #002068;
+  border: 1px solid #f2f2f4;
+  padding: 0vw 2vw;
+}
+
+.orange-box img {
+  width: 5vw;
+  margin-top: 3vw;
+  margin-left: -1vw;
+  margin-bottom: 3vw;
+}
+
+.expanded .orange-box img,
+.expanded .orange-box span {
+  max-height: 0px;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+}
+
+.orange-box .scroll-message {
+  color: #f2f2f4;
+  display: flex;
+  align-items: center;
+  gap: 0.3vw;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 0.7vw;
+  position: absolute;
+  bottom: 0vw;
+  left: 0;
+  padding: 3vw 0 0.5vw 0;
+  width: 100%;
+  border-radius: 0 0 0.5vw 0.5vw;
+  background: #002068;
+  background: -webkit-linear-gradient(
+    360deg,
+    rgba(0, 32, 104, 1) 27%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  background: -moz-linear-gradient(
+    360deg,
+    rgba(0, 32, 104, 1) 27%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  background: linear-gradient(
+    360deg,
+    rgba(0, 32, 104, 1) 27%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#002068", endColorstr="#000000", GradientType=0);
+}
+
+.orange-box .close-button {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.expanded .orange-box .close-button {
+  pointer-events: auto;
+  opacity: 1;
+  transition: transform 0.3s ease-in-out;
+  font-size: 5vw;
+  position: absolute;
+  top: 1.2vw;
+  right: 1.2vw;
+  color: #f2f2f4;
+}
+
+.expanded:hover .orange-box,
+.expanded:hover .orange-box-hover-1,
+.expanded:hover .orange-box-hover-2,
+.expanded:hover {
+  transform: none;
+  margin: 0;
+  box-shadow: none;
+}
+
+.closed .orange-box .orange-box-content p,
+.closed .orange-box .orange-box-content h3,
+.closed .orange-box .scroll-message,
+.closed .orange-box-content {
+  max-height: 0;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
 }

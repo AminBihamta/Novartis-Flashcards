@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-                <script>
-              document.addEventListener('DOMContentLoaded', function () {
-              document.querySelectorAll('.dropdown-container').forEach(function (container) {
-                var arrow = container.querySelector('.arrow-wrapper');
-                var content = container.querySelector('.dropdown-content');
-                var dropdownEl = container.querySelector('.dropdown');
-                if (!arrow || !content) return;
-                arrow.style.cursor = 'pointer';
-                arrow.addEventListener('click', function () {
-                content.classList.toggle('disabled');
-                if (dropdownEl) dropdownEl.classList.toggle('active');
-                });
-              });
-              });
-            </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .querySelectorAll(".dropdown-container")
+          .forEach(function (container) {
+            var arrow = container.querySelector(".arrow-wrapper");
+            var content = container.querySelector(".dropdown-content");
+            var dropdownEl = container.querySelector(".dropdown");
+            if (!arrow || !content) return;
+            arrow.style.cursor = "pointer";
+            arrow.addEventListener("click", function () {
+              content.classList.toggle("disabled");
+              if (dropdownEl) dropdownEl.classList.toggle("active");
+            });
+          });
+      });
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page 5</title>
@@ -42,7 +44,6 @@
           gap: 0.5vw;
           position: relative;
           z-index: 1;
-
         "
         class="flex flex-col justify-between"
       >
@@ -146,9 +147,8 @@
       </div>
 
       <div
-        style="padding: 5vw; gap: 0.5vw;"
+        style="padding: 5vw; gap: 0.5vw"
         class="flex flex-col h-full justify-around"
-        "
       >
         <div
           class="flex flex-row justify-center items-center relative"
@@ -185,7 +185,7 @@
           </a>
         </div>
         <div>
-<div class="dropdown-container">
+          <div class="dropdown-container">
             <div
               class="flex flex-row justify-between dropdown items-center"
               style="
@@ -194,7 +194,10 @@
                 padding: 1.5vw 1vw;
               "
             >
-              <div class="flex flex-row align-center items-center" style="gap: 1vw">
+              <div
+                class="flex flex-row align-center items-center"
+                style="gap: 1vw"
+              >
                 <style>
                   /* swap magnifier on .dropdown hover */
                   .dropdown .mag-wrapper {
@@ -202,7 +205,6 @@
                     width: 3vw;
                     height: 3vw;
                     flex-shrink: 0;
-  
                   }
                   .dropdown .mag-wrapper img {
                     position: absolute;
@@ -213,17 +215,29 @@
                     transition: opacity 0.4s ease-in-out;
                     display: block;
                   }
-                  .dropdown .mag-wrapper .mag-dark { opacity: 1; }
-                  .dropdown .mag-wrapper .mag-light { opacity: 0; }
-                  .dropdown:hover .mag-wrapper .mag-dark { opacity: 0; }
-                  .dropdown:hover .mag-wrapper .mag-light { opacity: 1; }
+                  .dropdown .mag-wrapper .mag-dark {
+                    opacity: 1;
+                  }
+                  .dropdown .mag-wrapper .mag-light {
+                    opacity: 0;
+                  }
+                  .dropdown:hover .mag-wrapper .mag-dark {
+                    opacity: 0;
+                  }
+                  .dropdown:hover .mag-wrapper .mag-light {
+                    opacity: 1;
+                  }
                 </style>
-  
+
                 <div class="mag-wrapper" aria-hidden="true">
                   <img src="/assets/maginifier.svg" class="mag-dark" alt="" />
-                  <img src="/assets/maginifier-light.svg" class="mag-light" alt="" />
+                  <img
+                    src="/assets/maginifier-light.svg"
+                    class="mag-light"
+                    alt=""
+                  />
                 </div>
-  
+
                 <p
                   style="
                     font-size: 1.7vw;
@@ -234,22 +248,30 @@
                   <b>Assess</b><br />
                   The Landscape
                 </p>
-  
-                
               </div>
               <div class="arrow-wrapper" aria-hidden="true">
-                <img src="/assets/dropdown-blue.svg" class="arrow-dark" alt="arrow down" />
-                <img src="/assets/dropdown-light.svg" class="arrow-light" alt="arrow down (hover)" />
+                <img
+                  src="/assets/dropdown-blue.svg"
+                  class="arrow-dark"
+                  alt="arrow down"
+                />
+                <img
+                  src="/assets/dropdown-light.svg"
+                  class="arrow-light"
+                  alt="arrow down (hover)"
+                />
               </div>
             </div>
             <div class="dropdown-content disabled">
-              <p>To assess the external landscape , opportunity size and consolidate all necessary information to maximize the alternate funding model</p>
+              <p>
+                To assess the external landscape , opportunity size and
+                consolidate all necessary information to maximize the alternate
+                funding model
+              </p>
               <a href="#" class="learn-more">learn more</a>
             </div>
-
-
-</div>
-<div class="dropdown-container">
+          </div>
+          <div class="dropdown-container">
             <div
               class="flex flex-row justify-between dropdown items-center"
               style="
@@ -258,7 +280,10 @@
                 padding: 1.5vw 1vw;
               "
             >
-              <div class="flex flex-row align-center items-center" style="gap: 1vw">
+              <div
+                class="flex flex-row align-center items-center"
+                style="gap: 1vw"
+              >
                 <style>
                   /* swap magnifier on .dropdown hover */
                   .dropdown .mag-wrapper {
@@ -266,7 +291,6 @@
                     width: 3vw;
                     height: 3vw;
                     flex-shrink: 0;
-  
                   }
                   .dropdown .mag-wrapper img {
                     position: absolute;
@@ -277,17 +301,29 @@
                     transition: opacity 0.4s ease-in-out;
                     display: block;
                   }
-                  .dropdown .mag-wrapper .mag-dark { opacity: 1; }
-                  .dropdown .mag-wrapper .mag-light { opacity: 0; }
-                  .dropdown:hover .mag-wrapper .mag-dark { opacity: 0; }
-                  .dropdown:hover .mag-wrapper .mag-light { opacity: 1; }
+                  .dropdown .mag-wrapper .mag-dark {
+                    opacity: 1;
+                  }
+                  .dropdown .mag-wrapper .mag-light {
+                    opacity: 0;
+                  }
+                  .dropdown:hover .mag-wrapper .mag-dark {
+                    opacity: 0;
+                  }
+                  .dropdown:hover .mag-wrapper .mag-light {
+                    opacity: 1;
+                  }
                 </style>
-  
+
                 <div class="mag-wrapper" aria-hidden="true">
                   <img src="/assets/maginifier.svg" class="mag-dark" alt="" />
-                  <img src="/assets/maginifier-light.svg" class="mag-light" alt="" />
+                  <img
+                    src="/assets/maginifier-light.svg"
+                    class="mag-light"
+                    alt=""
+                  />
                 </div>
-  
+
                 <p
                   style="
                     font-size: 1.7vw;
@@ -296,24 +332,31 @@
                   "
                 >
                   <b>Assemble</b><br />
-Activation of plan
+                  Activation of plan
                 </p>
-  
-                
               </div>
               <div class="arrow-wrapper" aria-hidden="true">
-                <img src="/assets/dropdown-blue.svg" class="arrow-dark" alt="arrow down" />
-                <img src="/assets/dropdown-light.svg" class="arrow-light" alt="arrow down (hover)" />
+                <img
+                  src="/assets/dropdown-blue.svg"
+                  class="arrow-dark"
+                  alt="arrow down"
+                />
+                <img
+                  src="/assets/dropdown-light.svg"
+                  class="arrow-light"
+                  alt="arrow down (hover)"
+                />
               </div>
             </div>
             <div class="dropdown-content disabled">
-              <p>Designing strategy, building capability, risk mitigation and implementation plan with milestone tracking.</p>
+              <p>
+                Designing strategy, building capability, risk mitigation and
+                implementation plan with milestone tracking.
+              </p>
               <a href="#" class="learn-more">learn more</a>
             </div>
-
-
-</div>
-<div class="dropdown-container">
+          </div>
+          <div class="dropdown-container">
             <div
               class="flex flex-row justify-between dropdown items-center"
               style="
@@ -322,7 +365,10 @@ Activation of plan
                 padding: 1.5vw 1vw;
               "
             >
-              <div class="flex flex-row align-center items-center" style="gap: 1vw">
+              <div
+                class="flex flex-row align-center items-center"
+                style="gap: 1vw"
+              >
                 <style>
                   /* swap magnifier on .dropdown hover */
                   .dropdown .mag-wrapper {
@@ -330,7 +376,6 @@ Activation of plan
                     width: 3vw;
                     height: 3vw;
                     flex-shrink: 0;
-  
                   }
                   .dropdown .mag-wrapper img {
                     position: absolute;
@@ -341,17 +386,29 @@ Activation of plan
                     transition: opacity 0.4s ease-in-out;
                     display: block;
                   }
-                  .dropdown .mag-wrapper .mag-dark { opacity: 1; }
-                  .dropdown .mag-wrapper .mag-light { opacity: 0; }
-                  .dropdown:hover .mag-wrapper .mag-dark { opacity: 0; }
-                  .dropdown:hover .mag-wrapper .mag-light { opacity: 1; }
+                  .dropdown .mag-wrapper .mag-dark {
+                    opacity: 1;
+                  }
+                  .dropdown .mag-wrapper .mag-light {
+                    opacity: 0;
+                  }
+                  .dropdown:hover .mag-wrapper .mag-dark {
+                    opacity: 0;
+                  }
+                  .dropdown:hover .mag-wrapper .mag-light {
+                    opacity: 1;
+                  }
                 </style>
-  
+
                 <div class="mag-wrapper" aria-hidden="true">
                   <img src="/assets/maginifier.svg" class="mag-dark" alt="" />
-                  <img src="/assets/maginifier-light.svg" class="mag-light" alt="" />
+                  <img
+                    src="/assets/maginifier-light.svg"
+                    class="mag-light"
+                    alt=""
+                  />
                 </div>
-  
+
                 <p
                   style="
                     font-size: 1.7vw;
@@ -359,33 +416,38 @@ Activation of plan
                     font-weight: light !important;
                   "
                 >
-                
-
                   <b>Act</b><br />
-Design an Efficient KPI framework
+                  Design an Efficient KPI framework
                 </p>
-  
-                
               </div>
               <div class="arrow-wrapper" aria-hidden="true">
-                <img src="/assets/dropdown-blue.svg" class="arrow-dark" alt="arrow down" />
-                <img src="/assets/dropdown-light.svg" class="arrow-light" alt="arrow down (hover)" />
+                <img
+                  src="/assets/dropdown-blue.svg"
+                  class="arrow-dark"
+                  alt="arrow down"
+                />
+                <img
+                  src="/assets/dropdown-light.svg"
+                  class="arrow-light"
+                  alt="arrow down (hover)"
+                />
               </div>
             </div>
             <div class="dropdown-content disabled">
-              <p>Understanding of leading & lagging indicators; assigning actionable KPIs's.</p>
+              <p>
+                Understanding of leading & lagging indicators; assigning
+                actionable KPIs's.
+              </p>
               <a href="#" class="learn-more">learn more</a>
             </div>
-
-
-</div>
+          </div>
         </div>
       </div>
     </div>
     <site-footer
       style="position: relative; z-index: 100"
-      next-text="Next (Alternative Funding)"
-      next-href="page-4.html"
+      next-text="Next (Assess the Landscape)"
+      next-href="page-6.html"
     ></site-footer>
   </body>
 </html>
