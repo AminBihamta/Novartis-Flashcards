@@ -7,7 +7,7 @@
 
     <link href="tailwind.css" rel="stylesheet" />
     <link href="styles.css" rel="stylesheet" />
-    <script src="footer.js" defer></script>
+    <script src="footer-white.js" defer></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         document.querySelectorAll(".orange-box-outter").forEach(function (box) {
@@ -40,6 +40,18 @@
               setExpanded(false);
             });
           }
+
+          // Show the scroll message only if total characters across
+          // .orange-box-content p elements exceeds 241 for this box
+          const paragraphs = box.querySelectorAll(".orange-box-content p");
+          let totalChars = 0;
+          paragraphs.forEach((p) => {
+            totalChars += (p.textContent || "").trim().length;
+          });
+          const scrollMsg = box.querySelector(".scroll-message");
+          if (scrollMsg) {
+            scrollMsg.style.display = totalChars > 140 ? "" : "none";
+          }
         });
       });
     </script>
@@ -55,7 +67,7 @@
         text-wrap: nowrap;
       }
       .button-div:nth-child(5) * {
-        width: 24vw !important;
+        width: min-content;
       }
 
       .footer-wrapper * {
@@ -87,11 +99,14 @@
       </h2>
       <h1
         class="volta-modern-text m-0 p-0 w-full text-light"
-        style="color: #f2f2f4"
+        style="color: #f2f2f4; margin-top: 1vw"
       >
         <b style="font-weight: bold">Fintech</b> Partnership
       </h1>
-      <div class="flex flex-row items-center relative" style="gap: 1vw">
+      <div
+        class="flex flex-row items-center relative"
+        style="gap: 1vw; margin-top: 2vw"
+      >
         <h2
           class="m-0 p-0"
           style="
@@ -111,6 +126,7 @@
           >
             01. Technical Capability
             <svg
+              style="flex-shrink: 0; width: 1.5vw; height: auto"
               width="22"
               height="22"
               viewBox="0 0 22 22"
@@ -140,6 +156,7 @@
           >
             02. Integrability Quotient
             <svg
+              style="flex-shrink: 0; width: 1.5vw; height: auto"
               width="22"
               height="22"
               viewBox="0 0 22 22"
@@ -169,6 +186,7 @@
           >
             03. Data Analytics & Risk Management
             <svg
+              style="flex-shrink: 0; width: 1.5vw; height: 1.5vw"
               width="22"
               height="22"
               viewBox="0 0 22 22"
@@ -199,12 +217,15 @@
           alt=""
         />
       </div>
-      <div class="w-full flex justify-center items-center" style="gap: 1vw">
+      <div
+        class="w-full flex justify-center items-center"
+        style="gap: 1vw; margin-top: 2vw"
+      >
         <div
           class="w-full h-full flex grow flex-col relative orange-box-outter closed"
         >
           <div class="w-full h-full flex grow flex-col relative orange-box">
-            <img src="assets/process icon.svg" alt="" />
+            <img src="assets/connection.svg" alt="" />
 
             <span
               style="
@@ -217,19 +238,12 @@
               >+</span
             >
             <div class="orange-box-content">
-              <h3>Process</h3>
+              <h3>Opportunity Size</h3>
               <p>
-                Collate Insights on the process for availing health financing as
-                value added offering by the patient.
+                Analyze the est. population for whom cash flow is a barrier to
+                access.
               </p>
-              <p>
-                Ease of accessibility for the patient through the Fintech
-                solution.
-              </p>
-              <p>
-                Evaluate whether the service will be classified under POP or
-                outside POP.
-              </p>
+              <p>Assess the feasibility based on the drug treatment regimen.</p>
             </div>
             <div class="scroll-message">
               scroll down
@@ -262,7 +276,143 @@
               />
             </svg>
             <span style="color: #002068; font-size: 1.5vw; line-height: 2vw"
-              >Process</span
+              >Opportunity Size</span
+            >
+          </div>
+          <div
+            class="bg-white w-full h-full absolute orange-box-hover-1"
+            style="border-radius: 0.5vw; z-index: 5"
+          ></div>
+          <div
+            class="bg-white w-full h-full absolute orange-box-hover-2"
+            style="border-radius: 0.5vw; z-index: 4"
+          ></div>
+        </div>
+        <div
+          class="w-full h-full flex grow flex-col relative orange-box-outter closed"
+        >
+          <div class="w-full h-full flex grow flex-col relative orange-box">
+            <img src="assets/healthcare icon.svg" alt="" />
+
+            <span
+              style="
+                font-size: 5vw;
+                position: absolute;
+                top: -0.4vw;
+                right: 1.4vw;
+                color: #002068;
+              "
+              >+</span
+            >
+            <div class="orange-box-content">
+              <h3>Healthcare System Scanning</h3>
+              <p>Income Pyramid segments analysis.</p>
+              <p>
+                Assess the availability of fin-tech organizations in the
+                country.
+              </p>
+              <p>Evaluate and understand the business model.</p>
+            </div>
+            <div class="scroll-message">
+              scroll down
+              <svg
+                width="0.5vw"
+                height="0.3vw"
+                viewBox="0 0 10 6"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M5.52199 5.51223C5.39789 5.63629 5.2296 5.70598 5.05412 5.70598C4.87865 5.70598 4.71036 5.63629 4.58626 5.51223L0.842654 1.76862C0.779449 1.70758 0.729034 1.63456 0.694352 1.55382C0.659669 1.47308 0.641414 1.38624 0.64065 1.29837C0.639886 1.21051 0.65663 1.12337 0.689904 1.04204C0.723179 0.960708 0.772317 0.886821 0.834452 0.824686C0.896586 0.762551 0.970474 0.713413 1.0518 0.680139C1.13313 0.646864 1.22027 0.630121 1.30814 0.630884C1.39601 0.631648 1.48285 0.649904 1.56358 0.684586C1.64432 0.719268 1.71734 0.769683 1.77839 0.832888L5.05412 4.10862L8.32986 0.832888C8.45467 0.712342 8.62183 0.64564 8.79535 0.647148C8.96886 0.648656 9.13484 0.718253 9.25753 0.840949C9.38023 0.963646 9.44983 1.12962 9.45134 1.30314C9.45284 1.47665 9.38614 1.64381 9.2656 1.76862L5.52199 5.51223Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <svg
+              class="close-button"
+              width="2vw"
+              height="2vw"
+              viewBox="0 0 32 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0.695313 26.7771L27.2947 0.177735L31.8085 4.69157L5.20914 31.2909L0.695313 26.7771ZM0.695312 4.69157L5.20915 0.177734L31.8085 26.7771L27.2947 31.2909L0.695312 4.69157Z"
+                fill="#F2F2F4"
+              />
+            </svg>
+            <span style="color: #002068; font-size: 1.5vw; line-height: 2vw"
+              >Healthcare System Scanning</span
+            >
+          </div>
+          <div
+            class="bg-white w-full h-full absolute orange-box-hover-1"
+            style="border-radius: 0.5vw; z-index: 5"
+          ></div>
+          <div
+            class="bg-white w-full h-full absolute orange-box-hover-2"
+            style="border-radius: 0.5vw; z-index: 4"
+          ></div>
+        </div>
+        <div
+          class="w-full h-full flex grow flex-col relative orange-box-outter closed"
+        >
+          <div class="w-full h-full flex grow flex-col relative orange-box">
+            <img src="assets/fintech icon.svg" alt="" />
+
+            <span
+              style="
+                font-size: 5vw;
+                position: absolute;
+                top: -0.4vw;
+                right: 1.4vw;
+                color: #002068;
+              "
+              >+</span
+            >
+            <div class="orange-box-content">
+              <h3>Fintech Companies</h3>
+              <p>
+                External Service Providers (ESP) with capability to implement
+                financing models for health.
+              </p>
+              <p>Patient base supported across different diseases.</p>
+              <p>Operational Model details.</p>
+            </div>
+            <div class="scroll-message">
+              scroll down
+              <svg
+                width="0.5vw"
+                height="0.3vw"
+                viewBox="0 0 10 6"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M5.52199 5.51223C5.39789 5.63629 5.2296 5.70598 5.05412 5.70598C4.87865 5.70598 4.71036 5.63629 4.58626 5.51223L0.842654 1.76862C0.779449 1.70758 0.729034 1.63456 0.694352 1.55382C0.659669 1.47308 0.641414 1.38624 0.64065 1.29837C0.639886 1.21051 0.65663 1.12337 0.689904 1.04204C0.723179 0.960708 0.772317 0.886821 0.834452 0.824686C0.896586 0.762551 0.970474 0.713413 1.0518 0.680139C1.13313 0.646864 1.22027 0.630121 1.30814 0.630884C1.39601 0.631648 1.48285 0.649904 1.56358 0.684586C1.64432 0.719268 1.71734 0.769683 1.77839 0.832888L5.05412 4.10862L8.32986 0.832888C8.45467 0.712342 8.62183 0.64564 8.79535 0.647148C8.96886 0.648656 9.13484 0.718253 9.25753 0.840949C9.38023 0.963646 9.44983 1.12962 9.45134 1.30314C9.45284 1.47665 9.38614 1.64381 9.2656 1.76862L5.52199 5.51223Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <svg
+              class="close-button"
+              width="2vw"
+              height="2vw"
+              viewBox="0 0 32 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0.695313 26.7771L27.2947 0.177735L31.8085 4.69157L5.20914 31.2909L0.695313 26.7771ZM0.695312 4.69157L5.20915 0.177734L31.8085 26.7771L27.2947 31.2909L0.695312 4.69157Z"
+                fill="#F2F2F4"
+              />
+            </svg>
+            <span style="color: #002068; font-size: 1.5vw; line-height: 2vw"
+              >Fintech Companies</span
             >
           </div>
           <div
@@ -352,7 +502,7 @@
           class="w-full h-full flex grow flex-col relative orange-box-outter closed"
         >
           <div class="w-full h-full flex grow flex-col relative orange-box">
-            <img src="assets/process icon.svg" alt="" />
+            <img src="assets/disease icon.svg" alt="" />
 
             <span
               style="
@@ -365,18 +515,10 @@
               >+</span
             >
             <div class="orange-box-content">
-              <h3>Process</h3>
+              <h3>Disease Landscape</h3>
               <p>
-                Collate Insights on the process for availing health financing as
-                value added offering by the patient.
-              </p>
-              <p>
-                Ease of accessibility for the patient through the Fintech
-                solution.
-              </p>
-              <p>
-                Evaluate whether the service will be classified under POP or
-                outside POP.
+                Assess the availability of Health financing across diseases or
+                drug classes.
               </p>
             </div>
             <div class="scroll-message">
@@ -410,7 +552,7 @@
               />
             </svg>
             <span style="color: #002068; font-size: 1.5vw; line-height: 2vw"
-              >Process</span
+              >Disease Landscape</span
             >
           </div>
           <div
@@ -426,7 +568,7 @@
           class="w-full h-full flex grow flex-col relative orange-box-outter closed"
         >
           <div class="w-full h-full flex grow flex-col relative orange-box">
-            <img src="assets/process icon.svg" alt="" />
+            <img src="assets/account icon.svg" alt="" />
 
             <span
               style="
@@ -439,18 +581,14 @@
               >+</span
             >
             <div class="orange-box-content">
-              <h3>Process</h3>
+              <h3>Penetration by Account</h3>
               <p>
-                Collate Insights on the process for availing health financing as
-                value added offering by the patient.
+                Assess the penetration by account segment e.g. Private
+                Hospitals.
               </p>
               <p>
-                Ease of accessibility for the patient through the Fintech
-                solution.
-              </p>
-              <p>
-                Evaluate whether the service will be classified under POP or
-                outside POP.
+                Rate of interest for patients within an account (may be variable
+                by financial service provider).
               </p>
             </div>
             <div class="scroll-message">
@@ -484,155 +622,7 @@
               />
             </svg>
             <span style="color: #002068; font-size: 1.5vw; line-height: 2vw"
-              >Process</span
-            >
-          </div>
-          <div
-            class="bg-white w-full h-full absolute orange-box-hover-1"
-            style="border-radius: 0.5vw; z-index: 5"
-          ></div>
-          <div
-            class="bg-white w-full h-full absolute orange-box-hover-2"
-            style="border-radius: 0.5vw; z-index: 4"
-          ></div>
-        </div>
-        <div
-          class="w-full h-full flex grow flex-col relative orange-box-outter closed"
-        >
-          <div class="w-full h-full flex grow flex-col relative orange-box">
-            <img src="assets/process icon.svg" alt="" />
-
-            <span
-              style="
-                font-size: 5vw;
-                position: absolute;
-                top: -0.4vw;
-                right: 1.4vw;
-                color: #002068;
-              "
-              >+</span
-            >
-            <div class="orange-box-content">
-              <h3>Process</h3>
-              <p>
-                Collate Insights on the process for availing health financing as
-                value added offering by the patient.
-              </p>
-              <p>
-                Ease of accessibility for the patient through the Fintech
-                solution.
-              </p>
-              <p>
-                Evaluate whether the service will be classified under POP or
-                outside POP.
-              </p>
-            </div>
-            <div class="scroll-message">
-              scroll down
-              <svg
-                width="0.5vw"
-                height="0.3vw"
-                viewBox="0 0 10 6"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M5.52199 5.51223C5.39789 5.63629 5.2296 5.70598 5.05412 5.70598C4.87865 5.70598 4.71036 5.63629 4.58626 5.51223L0.842654 1.76862C0.779449 1.70758 0.729034 1.63456 0.694352 1.55382C0.659669 1.47308 0.641414 1.38624 0.64065 1.29837C0.639886 1.21051 0.65663 1.12337 0.689904 1.04204C0.723179 0.960708 0.772317 0.886821 0.834452 0.824686C0.896586 0.762551 0.970474 0.713413 1.0518 0.680139C1.13313 0.646864 1.22027 0.630121 1.30814 0.630884C1.39601 0.631648 1.48285 0.649904 1.56358 0.684586C1.64432 0.719268 1.71734 0.769683 1.77839 0.832888L5.05412 4.10862L8.32986 0.832888C8.45467 0.712342 8.62183 0.64564 8.79535 0.647148C8.96886 0.648656 9.13484 0.718253 9.25753 0.840949C9.38023 0.963646 9.44983 1.12962 9.45134 1.30314C9.45284 1.47665 9.38614 1.64381 9.2656 1.76862L5.52199 5.51223Z"
-                  fill="white"
-                />
-              </svg>
-            </div>
-            <svg
-              class="close-button"
-              width="2vw"
-              height="2vw"
-              viewBox="0 0 32 32"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0.695313 26.7771L27.2947 0.177735L31.8085 4.69157L5.20914 31.2909L0.695313 26.7771ZM0.695312 4.69157L5.20915 0.177734L31.8085 26.7771L27.2947 31.2909L0.695312 4.69157Z"
-                fill="#F2F2F4"
-              />
-            </svg>
-            <span style="color: #002068; font-size: 1.5vw; line-height: 2vw"
-              >Process</span
-            >
-          </div>
-          <div
-            class="bg-white w-full h-full absolute orange-box-hover-1"
-            style="border-radius: 0.5vw; z-index: 5"
-          ></div>
-          <div
-            class="bg-white w-full h-full absolute orange-box-hover-2"
-            style="border-radius: 0.5vw; z-index: 4"
-          ></div>
-        </div>
-        <div
-          class="w-full h-full flex grow flex-col relative orange-box-outter closed"
-        >
-          <div class="w-full h-full flex grow flex-col relative orange-box">
-            <img src="assets/process icon.svg" alt="" />
-
-            <span
-              style="
-                font-size: 5vw;
-                position: absolute;
-                top: -0.4vw;
-                right: 1.4vw;
-                color: #002068;
-              "
-              >+</span
-            >
-            <div class="orange-box-content">
-              <h3>Process</h3>
-              <p>
-                Collate Insights on the process for availing health financing as
-                value added offering by the patient.
-              </p>
-              <p>
-                Ease of accessibility for the patient through the Fintech
-                solution.
-              </p>
-              <p>
-                Evaluate whether the service will be classified under POP or
-                outside POP.
-              </p>
-            </div>
-            <div class="scroll-message">
-              scroll down
-              <svg
-                width="0.5vw"
-                height="0.3vw"
-                viewBox="0 0 10 6"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M5.52199 5.51223C5.39789 5.63629 5.2296 5.70598 5.05412 5.70598C4.87865 5.70598 4.71036 5.63629 4.58626 5.51223L0.842654 1.76862C0.779449 1.70758 0.729034 1.63456 0.694352 1.55382C0.659669 1.47308 0.641414 1.38624 0.64065 1.29837C0.639886 1.21051 0.65663 1.12337 0.689904 1.04204C0.723179 0.960708 0.772317 0.886821 0.834452 0.824686C0.896586 0.762551 0.970474 0.713413 1.0518 0.680139C1.13313 0.646864 1.22027 0.630121 1.30814 0.630884C1.39601 0.631648 1.48285 0.649904 1.56358 0.684586C1.64432 0.719268 1.71734 0.769683 1.77839 0.832888L5.05412 4.10862L8.32986 0.832888C8.45467 0.712342 8.62183 0.64564 8.79535 0.647148C8.96886 0.648656 9.13484 0.718253 9.25753 0.840949C9.38023 0.963646 9.44983 1.12962 9.45134 1.30314C9.45284 1.47665 9.38614 1.64381 9.2656 1.76862L5.52199 5.51223Z"
-                  fill="white"
-                />
-              </svg>
-            </div>
-            <svg
-              class="close-button"
-              width="2vw"
-              height="2vw"
-              viewBox="0 0 32 32"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0.695313 26.7771L27.2947 0.177735L31.8085 4.69157L5.20914 31.2909L0.695313 26.7771ZM0.695312 4.69157L5.20915 0.177734L31.8085 26.7771L27.2947 31.2909L0.695312 4.69157Z"
-                fill="#F2F2F4"
-              />
-            </svg>
-            <span style="color: #002068; font-size: 1.5vw; line-height: 2vw"
-              >Process</span
+              >Penetration by Account</span
             >
           </div>
           <div
@@ -649,8 +639,8 @@
     <div class="footer-wrapper">
       <site-footer
         style="position: relative; z-index: 100"
-        next-text="Next (Assess the Landscape)"
-        next-href="page-6.html"
+        next-text="Next (Assemble - Activation of plan)"
+        next-href="page-7.html"
       ></site-footer>
     </div>
   </body>

@@ -507,9 +507,11 @@ p {
 }
 
 .orange-box-content h3 {
-  font-size: 1.2vw;
+  font-size: 1vw;
   font-weight: bold !important;
   color: #f2f2f4;
+  line-height: 1.2vw;
+  margin-bottom: 0.5vw;
 }
 
 .orange-box-content p {
@@ -525,7 +527,7 @@ p {
   max-height: 15vw;
   padding-bottom: 3vw;
   overflow-y: scroll;
-  padding-top: 2vw;
+  padding-top: 3.2vw;
   /* hide scrollbar but keep scrollable content */
 }
 
@@ -632,6 +634,13 @@ p {
   transform: none;
   margin: 0;
   box-shadow: none;
+}
+
+.expanded .orange-box,
+.expanded .orange-box-hover-1,
+.expanded .orange-box-hover-2,
+.expanded {
+  transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 .closed .orange-box .orange-box-content p,

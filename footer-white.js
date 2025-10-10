@@ -39,19 +39,23 @@ class SiteFooter extends HTMLElement {
 
 
         <button type="button" onclick="history.back()" aria-label="Go back" class="flex" style="gap: 0.5vw">
-          <svg width="1.7vw" height="1.7vw" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M14.7127 9L10 13.7174L14.7143 18.4317" stroke="#002068" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M17.8571 23.1463H25.7143C28.8571 23.1463 30.4286 21.5749 30.4286 18.4321C30.4286 13.7178 28.8571 13.7178 25.7143 13.7178H10" stroke="#002068" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
+          
+
+          <svg width="1.7vw" height="1.7vw" viewBox="0 0 23 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.71271 1L1 5.71743L5.71429 10.4317" stroke="#F2F2F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8.85714 15.1454H16.7143C19.8571 15.1454 21.4286 13.5739 21.4286 10.4311C21.4286 5.7168 19.8571 5.7168 16.7143 5.7168H1" stroke="#F2F2F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
           <span style="font-size: 1.1vw; text-decoration: underline; color: #002068">Back</span>
         </button>
 
         <a class="rounded-full flex items-center next-page-button" href="${nextHref}">
           ${nextText}
           <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M9 7.5L12.5 11L9 14.5" stroke="#002068" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M22 11C22 17.0751 17.0751 22 11 22C4.92487 22 0 17.0751 0 11C0 4.92487 4.92487 0 11 0C17.0751 0 22 4.92487 22 11ZM1.496 11C1.496 16.2489 5.75109 20.504 11 20.504C16.2489 20.504 20.504 16.2489 20.504 11C20.504 5.75109 16.2489 1.496 11 1.496C5.75109 1.496 1.496 5.75109 1.496 11Z" fill="#002068" />
-          </svg>
+<path d="M10 7.5L13.5 11L10 14.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M11 21C16.523 21 21 16.523 21 11C21 5.477 16.523 1 11 1C5.477 1 1 5.477 1 11C1 16.523 5.477 21 11 21Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
         </a>
       </footer>
     `;
