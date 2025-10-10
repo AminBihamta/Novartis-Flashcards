@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page 36</title>
+
+    <link href="tailwind.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+    <script src="footer-white.js" defer></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".orange-box-outter").forEach(function (box) {
+          function setExpanded(expand) {
+            if (expand === undefined) {
+              box.classList.toggle("expanded");
+              box.classList.toggle("closed");
+            } else if (expand) {
+              box.classList.add("expanded");
+              box.classList.remove("closed");
+            } else {
+              box.classList.remove("expanded");
+              box.classList.add("closed");
+            }
+          }
+
+          // Clicking the outer box should only open it (when it's closed).
+          // Closing should only happen via the .close-button.
+          box.addEventListener("click", function () {
+            if (box.classList.contains("closed")) {
+              setExpanded(true);
+            }
+          });
+
+          const closeBtn = box.querySelector(".close-button");
+          if (closeBtn) {
+            closeBtn.style.cursor = "pointer";
+            closeBtn.addEventListener("click", function (e) {
+              e.stopPropagation();
+              setExpanded(false);
+            });
+          }
+
+          // Show the scroll message only if total characters across
+          // .orange-box-content p elements exceeds 241 for this box
+          const paragraphs = box.querySelectorAll(".orange-box-content p");
+          let totalChars = 0;
+          paragraphs.forEach((p) => {
+            totalChars += (p.textContent || "").trim().length;
+          });
+          const scrollMsg = box.querySelector(".scroll-message");
+          if (scrollMsg) {
+            scrollMsg.style.display = totalChars > 140 ? "" : "none";
+          }
+        });
+      });
+    </script>
+    <style>
+      .button-div > div > div {
+        width: min-content !important;
+      }
+
+      .button-div * {
+        font-size: 1.2vw;
+        /* padding: 0.8vw; */
+        word-wrap: nowrap;
+        text-wrap: nowrap;
+      }
+      .button-div:nth-child(5) * {
+        width: 25vw;
+      }
+
+      .footer-wrapper {
+        width: 100% !important;
+      }
+
+      .footer-wrapper * {
+        color: #f2f2f4 !important;
+        border-color: #f2f2f4 !important;
+      }
+
+      .orange-box-outter, .orange-box, .orange-box-hover-1, .orange-box-hover-2 {
+        height: 18vw;
+      }
+        
+    </style>
+  </head>
+  <body
+    class="flex items-center flex-col justify-between"
+    style="background-color: #002068"
+  >
+    <div
+      class="w-full flex flex-col h-full items-center"
+      style="padding: 3vw 6vw; display: grid; grid-template-columns: 1fr 2fr"
+    >
+      <div class="flex flex-col gap-0" ">
+        <h2
+          class="m-0 p-0 text-light"
+          style="
+            color: #f2f2f4;
+            font-size: 1.2vw;
+            border-radius: 100vw;
+            padding: 0.1vw 0.8vw 0vw 0.8vw;
+            width: max-content;
+            font-weight: 100;
+            background-color: #ff585d;
+            font-weight: bold;
+            margin-bottom: 1vw;
+          "
+        >
+          Assess the Landscape
+        </h2>
+        <h1
+          class="volta-modern-text m-0 p-0 w-full text-light"
+          style="color: #f2f2f4; margin-top: 1vw; font-weight: 100"
+        >
+          <b style="font-weight: bold">Special</b> Funds
+        </h1>
+      </div>
+
+      <div class="flex flex-col align-center items-center" style="gap: 1vw">
+        <div
+          class="w-full flex justify-center items-center items-center"
+          style="
+            gap: 1vw;
+            align-items: center;
+            place-content: center;
+            justify-content: center;
+          "
+        >
+          <div
+            class="w-full h-full flex grow flex-col relative orange-box-outter closed"
+          >
+            <div class="w-full h-full flex grow flex-col relative orange-box">
+              <img src="assets/connection.svg" alt="" />
+
+              <span
+                style="
+                  font-size: 5vw;
+                  position: absolute;
+                  top: -0.4vw;
+                  right: 1.4vw;
+                  color: #002068;
+                "
+                >+</span
+              >
+              <div class="orange-box-content">
+                <h3>Opportunity Size</h3>
+                <p>
+                  Communication material creation and dissemination plan to
+                  HCP's and other key stakeholders.
+                </p>
+                <p>
+                  Awareness sessions/ roadshows to the HCP's on the innovative
+                  access model.
+                </p>
+                <p>
+                  Account prioritization and program implementation in hospitals
+                  & clinics.
+                </p>
+              </div>
+              <div class="scroll-message">
+                scroll down
+                <svg
+                  width="0.5vw"
+                  height="0.3vw"
+                  viewBox="0 0 10 6"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M5.52199 5.51223C5.39789 5.63629 5.2296 5.70598 5.05412 5.70598C4.87865 5.70598 4.71036 5.63629 4.58626 5.51223L0.842654 1.76862C0.779449 1.70758 0.729034 1.63456 0.694352 1.55382C0.659669 1.47308 0.641414 1.38624 0.64065 1.29837C0.639886 1.21051 0.65663 1.12337 0.689904 1.04204C0.723179 0.960708 0.772317 0.886821 0.834452 0.824686C0.896586 0.762551 0.970474 0.713413 1.0518 0.680139C1.13313 0.646864 1.22027 0.630121 1.30814 0.630884C1.39601 0.631648 1.48285 0.649904 1.56358 0.684586C1.64432 0.719268 1.71734 0.769683 1.77839 0.832888L5.05412 4.10862L8.32986 0.832888C8.45467 0.712342 8.62183 0.64564 8.79535 0.647148C8.96886 0.648656 9.13484 0.718253 9.25753 0.840949C9.38023 0.963646 9.44983 1.12962 9.45134 1.30314C9.45284 1.47665 9.38614 1.64381 9.2656 1.76862L5.52199 5.51223Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+              <svg
+                class="close-button"
+                width="2vw"
+                height="2vw"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0.695313 26.7771L27.2947 0.177735L31.8085 4.69157L5.20914 31.2909L0.695313 26.7771ZM0.695312 4.69157L5.20915 0.177734L31.8085 26.7771L27.2947 31.2909L0.695312 4.69157Z"
+                  fill="#F2F2F4"
+                />
+              </svg>
+              <span
+                style="
+                  color: #002068;
+                  font-size: 1.5vw;
+                  line-height: 2vw;
+                  margin-bottom: 1.1vw;
+                "
+                >Opportunity Size</span
+              >
+            </div>
+            <div
+              class="bg-white w-full h-full absolute orange-box-hover-1"
+              style="border-radius: 0.5vw; z-index: 5"
+            ></div>
+            <div
+              class="bg-white w-full h-full absolute orange-box-hover-2"
+              style="border-radius: 0.5vw; z-index: 4"
+            ></div>
+          </div>
+          <div
+            class="w-full h-full flex grow flex-col relative orange-box-outter closed"
+          >
+            <div class="w-full h-full flex grow flex-col relative orange-box">
+              <img src="assets/healthcare icon.svg" alt="" />
+
+              <span
+                style="
+                  font-size: 5vw;
+                  position: absolute;
+                  top: -0.4vw;
+                  right: 1.4vw;
+                  color: #002068;
+                "
+                >+</span
+              >
+              <div class="orange-box-content">
+                <h3>Healthcare System Scanning</h3>
+                <p>
+                  Communication material creation and dissemination plan to
+                  HCP's and other key stakeholders.
+                </p>
+                <p>
+                  Awareness sessions/ roadshows to the HCP's on the innovative
+                  access model.
+                </p>
+                <p>
+                  Account prioritization and program implementation in hospitals
+                  & clinics.
+                </p>
+              </div>
+              <div class="scroll-message">
+                scroll down
+                <svg
+                  width="0.5vw"
+                  height="0.3vw"
+                  viewBox="0 0 10 6"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M5.52199 5.51223C5.39789 5.63629 5.2296 5.70598 5.05412 5.70598C4.87865 5.70598 4.71036 5.63629 4.58626 5.51223L0.842654 1.76862C0.779449 1.70758 0.729034 1.63456 0.694352 1.55382C0.659669 1.47308 0.641414 1.38624 0.64065 1.29837C0.639886 1.21051 0.65663 1.12337 0.689904 1.04204C0.723179 0.960708 0.772317 0.886821 0.834452 0.824686C0.896586 0.762551 0.970474 0.713413 1.0518 0.680139C1.13313 0.646864 1.22027 0.630121 1.30814 0.630884C1.39601 0.631648 1.48285 0.649904 1.56358 0.684586C1.64432 0.719268 1.71734 0.769683 1.77839 0.832888L5.05412 4.10862L8.32986 0.832888C8.45467 0.712342 8.62183 0.64564 8.79535 0.647148C8.96886 0.648656 9.13484 0.718253 9.25753 0.840949C9.38023 0.963646 9.44983 1.12962 9.45134 1.30314C9.45284 1.47665 9.38614 1.64381 9.2656 1.76862L5.52199 5.51223Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+              <svg
+                class="close-button"
+                width="2vw"
+                height="2vw"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0.695313 26.7771L27.2947 0.177735L31.8085 4.69157L5.20914 31.2909L0.695313 26.7771ZM0.695312 4.69157L5.20915 0.177734L31.8085 26.7771L27.2947 31.2909L0.695312 4.69157Z"
+                  fill="#F2F2F4"
+                />
+              </svg>
+              <span
+                style="
+                  color: #002068;
+                  font-size: 1.5vw;
+                  line-height: 2vw;
+                  margin-bottom: 1.1vw;
+                "
+                >Healthcare System Scanning</span
+              >
+            </div>
+            <div
+              class="bg-white w-full h-full absolute orange-box-hover-1"
+              style="border-radius: 0.5vw; z-index: 5"
+            ></div>
+            <div
+              class="bg-white w-full h-full absolute orange-box-hover-2"
+              style="border-radius: 0.5vw; z-index: 4"
+            ></div>
+          </div>
+          <div
+            class="w-full h-full flex grow flex-col relative orange-box-outter closed"
+          >
+            <div class="w-full h-full flex grow flex-col relative orange-box">
+              <img src="assets/cash-dark.svg" alt="" />
+
+              <span
+                style="
+                  font-size: 5vw;
+                  position: absolute;
+                  top: -0.4vw;
+                  right: 1.4vw;
+                  color: #002068;
+                "
+                >+</span
+              >
+              <div class="orange-box-content">
+                <h3>Funding Agencies Mapping</h3>
+                <p>
+                  Communication material creation and dissemination plan to
+                  HCP's and other key stakeholders.
+                </p>
+                <p>
+                  Awareness sessions/ roadshows to the HCP's on the innovative
+                  access model.
+                </p>
+                <p>
+                  Account prioritization and program implementation in hospitals
+                  & clinics.
+                </p>
+              </div>
+              <div class="scroll-message">
+                scroll down
+                <svg
+                  width="0.5vw"
+                  height="0.3vw"
+                  viewBox="0 0 10 6"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M5.52199 5.51223C5.39789 5.63629 5.2296 5.70598 5.05412 5.70598C4.87865 5.70598 4.71036 5.63629 4.58626 5.51223L0.842654 1.76862C0.779449 1.70758 0.729034 1.63456 0.694352 1.55382C0.659669 1.47308 0.641414 1.38624 0.64065 1.29837C0.639886 1.21051 0.65663 1.12337 0.689904 1.04204C0.723179 0.960708 0.772317 0.886821 0.834452 0.824686C0.896586 0.762551 0.970474 0.713413 1.0518 0.680139C1.13313 0.646864 1.22027 0.630121 1.30814 0.630884C1.39601 0.631648 1.48285 0.649904 1.56358 0.684586C1.64432 0.719268 1.71734 0.769683 1.77839 0.832888L5.05412 4.10862L8.32986 0.832888C8.45467 0.712342 8.62183 0.64564 8.79535 0.647148C8.96886 0.648656 9.13484 0.718253 9.25753 0.840949C9.38023 0.963646 9.44983 1.12962 9.45134 1.30314C9.45284 1.47665 9.38614 1.64381 9.2656 1.76862L5.52199 5.51223Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+              <svg
+                class="close-button"
+                width="2vw"
+                height="2vw"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0.695313 26.7771L27.2947 0.177735L31.8085 4.69157L5.20914 31.2909L0.695313 26.7771ZM0.695312 4.69157L5.20915 0.177734L31.8085 26.7771L27.2947 31.2909L0.695312 4.69157Z"
+                  fill="#F2F2F4"
+                />
+              </svg>
+              <span
+                style="
+                  color: #002068;
+                  font-size: 1.5vw;
+                  line-height: 2vw;
+                  margin-bottom: 1.1vw;
+                "
+                >Funding Agencies Mapping</span
+              >
+            </div>
+            <div
+              class="bg-white w-full h-full absolute orange-box-hover-1"
+              style="border-radius: 0.5vw; z-index: 5"
+            ></div>
+            <div
+              class="bg-white w-full h-full absolute orange-box-hover-2"
+              style="border-radius: 0.5vw; z-index: 4"
+            ></div>
+          </div>
+          <div
+            class="w-full h-full flex grow flex-col relative orange-box-outter closed"
+          >
+            <div class="w-full h-full flex grow flex-col relative orange-box">
+              <img src="assets/arrows.svg" alt="" />
+
+              <span
+                style="
+                  font-size: 5vw;
+                  position: absolute;
+                  top: -0.4vw;
+                  right: 1.4vw;
+                  color: #002068;
+                "
+                >+</span
+              >
+              <div class="orange-box-content">
+                <h3>Our Process</h3>
+                <p>
+                  Communication material creation and dissemination plan to
+                  HCP's and other key stakeholders.
+                </p>
+                <p>
+                  Awareness sessions/ roadshows to the HCP's on the innovative
+                  access model.
+                </p>
+                <p>
+                  Account prioritization and program implementation in hospitals
+                  & clinics.
+                </p>
+              </div>
+              <div class="scroll-message">
+                scroll down
+                <svg
+                  width="0.5vw"
+                  height="0.3vw"
+                  viewBox="0 0 10 6"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M5.52199 5.51223C5.39789 5.63629 5.2296 5.70598 5.05412 5.70598C4.87865 5.70598 4.71036 5.63629 4.58626 5.51223L0.842654 1.76862C0.779449 1.70758 0.729034 1.63456 0.694352 1.55382C0.659669 1.47308 0.641414 1.38624 0.64065 1.29837C0.639886 1.21051 0.65663 1.12337 0.689904 1.04204C0.723179 0.960708 0.772317 0.886821 0.834452 0.824686C0.896586 0.762551 0.970474 0.713413 1.0518 0.680139C1.13313 0.646864 1.22027 0.630121 1.30814 0.630884C1.39601 0.631648 1.48285 0.649904 1.56358 0.684586C1.64432 0.719268 1.71734 0.769683 1.77839 0.832888L5.05412 4.10862L8.32986 0.832888C8.45467 0.712342 8.62183 0.64564 8.79535 0.647148C8.96886 0.648656 9.13484 0.718253 9.25753 0.840949C9.38023 0.963646 9.44983 1.12962 9.45134 1.30314C9.45284 1.47665 9.38614 1.64381 9.2656 1.76862L5.52199 5.51223Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+              <svg
+                class="close-button"
+                width="2vw"
+                height="2vw"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0.695313 26.7771L27.2947 0.177735L31.8085 4.69157L5.20914 31.2909L0.695313 26.7771ZM0.695312 4.69157L5.20915 0.177734L31.8085 26.7771L27.2947 31.2909L0.695312 4.69157Z"
+                  fill="#F2F2F4"
+                />
+              </svg>
+              <span
+                style="
+                  color: #002068;
+                  font-size: 1.5vw;
+                  line-height: 2vw;
+                  margin-bottom: 1.1vw;
+                "
+                >Our Process</span
+              >
+            </div>
+            <div
+              class="bg-white w-full h-full absolute orange-box-hover-1"
+              style="border-radius: 0.5vw; z-index: 5"
+            ></div>
+            <div
+              class="bg-white w-full h-full absolute orange-box-hover-2"
+              style="border-radius: 0.5vw; z-index: 4"
+            ></div>
+          </div>
+        </div>
+        <!-- Second row of boxes -->
+        <div
+          class="w-full flex justify-center items-center"
+          style="gap: 1vw; max-width: 78%"
+        >
+          <div
+            class="w-full h-full flex grow flex-col relative orange-box-outter closed"
+          >
+            <div class="w-full h-full flex grow flex-col relative orange-box">
+              <img src="assets/virus.svg" alt="" />
+
+              <span
+                style="
+                  font-size: 5vw;
+                  position: absolute;
+                  top: -0.4vw;
+                  right: 1.4vw;
+                  color: #002068;
+                "
+                >+</span
+              >
+              <div class="orange-box-content">
+                <h3>Disease Landscape</h3>
+                <p>
+                  Communication material creation and dissemination plan to
+                  HCP's and other key stakeholders.
+                </p>
+                <p>
+                  Awareness sessions/ roadshows to the HCP's on the innovative
+                  access model.
+                </p>
+                <p>
+                  Account prioritization and program implementation in hospitals
+                  & clinics.
+                </p>
+              </div>
+              <div class="scroll-message">
+                scroll down
+                <svg
+                  width="0.5vw"
+                  height="0.3vw"
+                  viewBox="0 0 10 6"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M5.52199 5.51223C5.39789 5.63629 5.2296 5.70598 5.05412 5.70598C4.87865 5.70598 4.71036 5.63629 4.58626 5.51223L0.842654 1.76862C0.779449 1.70758 0.729034 1.63456 0.694352 1.55382C0.659669 1.47308 0.641414 1.38624 0.64065 1.29837C0.639886 1.21051 0.65663 1.12337 0.689904 1.04204C0.723179 0.960708 0.772317 0.886821 0.834452 0.824686C0.896586 0.762551 0.970474 0.713413 1.0518 0.680139C1.13313 0.646864 1.22027 0.630121 1.30814 0.630884C1.39601 0.631648 1.48285 0.649904 1.56358 0.684586C1.64432 0.719268 1.71734 0.769683 1.77839 0.832888L5.05412 4.10862L8.32986 0.832888C8.45467 0.712342 8.62183 0.64564 8.79535 0.647148C8.96886 0.648656 9.13484 0.718253 9.25753 0.840949C9.38023 0.963646 9.44983 1.12962 9.45134 1.30314C9.45284 1.47665 9.38614 1.64381 9.2656 1.76862L5.52199 5.51223Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+              <svg
+                class="close-button"
+                width="2vw"
+                height="2vw"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0.695313 26.7771L27.2947 0.177735L31.8085 4.69157L5.20914 31.2909L0.695313 26.7771ZM0.695312 4.69157L5.20915 0.177734L31.8085 26.7771L27.2947 31.2909L0.695312 4.69157Z"
+                  fill="#F2F2F4"
+                />
+              </svg>
+              <span
+                style="
+                  color: #002068;
+                  font-size: 1.5vw;
+                  line-height: 2vw;
+                  margin-bottom: 1.1vw;
+                "
+                >Disease Landscape</span
+              >
+            </div>
+            <div
+              class="bg-white w-full h-full absolute orange-box-hover-1"
+              style="border-radius: 0.5vw; z-index: 5"
+            ></div>
+            <div
+              class="bg-white w-full h-full absolute orange-box-hover-2"
+              style="border-radius: 0.5vw; z-index: 4"
+            ></div>
+          </div>
+          <div
+            class="w-full h-full flex grow flex-col relative orange-box-outter closed"
+          >
+            <div class="w-full h-full flex grow flex-col relative orange-box">
+              <img src="assets/danger.svg" alt="" />
+
+              <span
+                style="
+                  font-size: 5vw;
+                  position: absolute;
+                  top: -0.4vw;
+                  right: 1.4vw;
+                  color: #002068;
+                "
+                >+</span
+              >
+              <div class="orange-box-content">
+                <h3>Policy Level Updates</h3>
+                <p>
+                  Communication material creation and dissemination plan to
+                  HCP's and other key stakeholders.
+                </p>
+                <p>
+                  Awareness sessions/ roadshows to the HCP's on the innovative
+                  access model.
+                </p>
+                <p>
+                  Account prioritization and program implementation in hospitals
+                  & clinics.
+                </p>
+              </div>
+              <div class="scroll-message">
+                scroll down
+                <svg
+                  width="0.5vw"
+                  height="0.3vw"
+                  viewBox="0 0 10 6"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M5.52199 5.51223C5.39789 5.63629 5.2296 5.70598 5.05412 5.70598C4.87865 5.70598 4.71036 5.63629 4.58626 5.51223L0.842654 1.76862C0.779449 1.70758 0.729034 1.63456 0.694352 1.55382C0.659669 1.47308 0.641414 1.38624 0.64065 1.29837C0.639886 1.21051 0.65663 1.12337 0.689904 1.04204C0.723179 0.960708 0.772317 0.886821 0.834452 0.824686C0.896586 0.762551 0.970474 0.713413 1.0518 0.680139C1.13313 0.646864 1.22027 0.630121 1.30814 0.630884C1.39601 0.631648 1.48285 0.649904 1.56358 0.684586C1.64432 0.719268 1.71734 0.769683 1.77839 0.832888L5.05412 4.10862L8.32986 0.832888C8.45467 0.712342 8.62183 0.64564 8.79535 0.647148C8.96886 0.648656 9.13484 0.718253 9.25753 0.840949C9.38023 0.963646 9.44983 1.12962 9.45134 1.30314C9.45284 1.47665 9.38614 1.64381 9.2656 1.76862L5.52199 5.51223Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+              <svg
+                class="close-button"
+                width="2vw"
+                height="2vw"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0.695313 26.7771L27.2947 0.177735L31.8085 4.69157L5.20914 31.2909L0.695313 26.7771ZM0.695312 4.69157L5.20915 0.177734L31.8085 26.7771L27.2947 31.2909L0.695312 4.69157Z"
+                  fill="#F2F2F4"
+                />
+              </svg>
+              <span
+                style="
+                  color: #002068;
+                  font-size: 1.5vw;
+                  line-height: 2vw;
+                  margin-bottom: 1.1vw;
+                "
+                >Policy Level Updates</span
+              >
+            </div>
+            <div
+              class="bg-white w-full h-full absolute orange-box-hover-1"
+              style="border-radius: 0.5vw; z-index: 5"
+            ></div>
+            <div
+              class="bg-white w-full h-full absolute orange-box-hover-2"
+              style="border-radius: 0.5vw; z-index: 4"
+            ></div>
+          </div>
+          <div
+            class="w-full h-full flex grow flex-col relative orange-box-outter closed"
+          >
+            <div class="w-full h-full flex grow flex-col relative orange-box">
+              <img src="assets/tracking.svg" alt="" />
+
+              <span
+                style="
+                  font-size: 5vw;
+                  position: absolute;
+                  top: -0.4vw;
+                  right: 1.4vw;
+                  color: #002068;
+                "
+                >+</span
+              >
+              <div class="orange-box-content">
+                <h3>Tracking Updates/ Additions</h3>
+                <p>
+                  Communication material creation and dissemination plan to
+                  HCP's and other key stakeholders.
+                </p>
+                <p>
+                  Awareness sessions/ roadshows to the HCP's on the innovative
+                  access model.
+                </p>
+                <p>
+                  Account prioritization and program implementation in hospitals
+                  & clinics.
+                </p>
+              </div>
+              <div class="scroll-message">
+                scroll down
+                <svg
+                  width="0.5vw"
+                  height="0.3vw"
+                  viewBox="0 0 10 6"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M5.52199 5.51223C5.39789 5.63629 5.2296 5.70598 5.05412 5.70598C4.87865 5.70598 4.71036 5.63629 4.58626 5.51223L0.842654 1.76862C0.779449 1.70758 0.729034 1.63456 0.694352 1.55382C0.659669 1.47308 0.641414 1.38624 0.64065 1.29837C0.639886 1.21051 0.65663 1.12337 0.689904 1.04204C0.723179 0.960708 0.772317 0.886821 0.834452 0.824686C0.896586 0.762551 0.970474 0.713413 1.0518 0.680139C1.13313 0.646864 1.22027 0.630121 1.30814 0.630884C1.39601 0.631648 1.48285 0.649904 1.56358 0.684586C1.64432 0.719268 1.71734 0.769683 1.77839 0.832888L5.05412 4.10862L8.32986 0.832888C8.45467 0.712342 8.62183 0.64564 8.79535 0.647148C8.96886 0.648656 9.13484 0.718253 9.25753 0.840949C9.38023 0.963646 9.44983 1.12962 9.45134 1.30314C9.45284 1.47665 9.38614 1.64381 9.2656 1.76862L5.52199 5.51223Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+              <svg
+                class="close-button"
+                width="2vw"
+                height="2vw"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0.695313 26.7771L27.2947 0.177735L31.8085 4.69157L5.20914 31.2909L0.695313 26.7771ZM0.695312 4.69157L5.20915 0.177734L31.8085 26.7771L27.2947 31.2909L0.695312 4.69157Z"
+                  fill="#F2F2F4"
+                />
+              </svg>
+              <span
+                style="
+                  color: #002068;
+                  font-size: 1.5vw;
+                  line-height: 2vw;
+                  margin-bottom: 1.1vw;
+                "
+                >Tracking Updates/ Additions</span
+              >
+            </div>
+            <div
+              class="bg-white w-full h-full absolute orange-box-hover-1"
+              style="border-radius: 0.5vw; z-index: 5"
+            ></div>
+            <div
+              class="bg-white w-full h-full absolute orange-box-hover-2"
+              style="border-radius: 0.5vw; z-index: 4"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-wrapper">
+      <site-footer
+        style="position: relative; z-index: 100"
+        next-text="Next (Special Funds)"
+        next-href="page-15.html"
+      ></site-footer>
+    </div>
+  </body>
+</html>
