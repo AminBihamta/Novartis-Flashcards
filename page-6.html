@@ -8,6 +8,41 @@
     <link href="tailwind.css" rel="stylesheet" />
     <link href="styles.css" rel="stylesheet" />
     <script src="footer.js" defer></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".orange-box-outter").forEach(function (box) {
+          function setExpanded(expand) {
+            if (expand === undefined) {
+              box.classList.toggle("expanded");
+              box.classList.toggle("closed");
+            } else if (expand) {
+              box.classList.add("expanded");
+              box.classList.remove("closed");
+            } else {
+              box.classList.remove("expanded");
+              box.classList.add("closed");
+            }
+          }
+
+          // Clicking the outer box should only open it (when it's closed).
+          // Closing should only happen via the .close-button.
+          box.addEventListener("click", function () {
+            if (box.classList.contains("closed")) {
+              setExpanded(true);
+            }
+          });
+
+          const closeBtn = box.querySelector(".close-button");
+          if (closeBtn) {
+            closeBtn.style.cursor = "pointer";
+            closeBtn.addEventListener("click", function (e) {
+              e.stopPropagation();
+              setExpanded(false);
+            });
+          }
+        });
+      });
+    </script>
     <style>
       .button-div > div > div {
         width: min-content !important;

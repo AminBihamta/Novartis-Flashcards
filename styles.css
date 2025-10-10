@@ -484,7 +484,7 @@ p {
   box-shadow: 0 0 23.08px 0 rgba(255, 88, 93, 0.7);
 }
 
-.orange-box-outter {
+.orange-box-outter.closed {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
