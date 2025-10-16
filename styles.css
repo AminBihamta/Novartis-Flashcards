@@ -64,7 +64,7 @@ h2 {
   line-height: 3vw;
 }
 
-.heading-pill-button{
+.heading-pill-button {
   color: #f2f2f4;
   font-size: 1.2vw;
   border-radius: 100vw;
@@ -474,43 +474,46 @@ p {
   opacity: 1;
 }
 
-.font-blue{
+.font-blue {
   color: var(--deep-blue);
 }
-.inner-content{
+.inner-content {
   height: calc(100vh - 137px);
 }
-h3.col-header{
+h3.col-header {
   font-family: Volta Modern Text;
   font-weight: 700;
   font-size: 20px;
   line-height: 100%;
   margin-left: 40px;
 }
-.col-header-no-img{
+.col-header-no-img {
   margin-left: 0 !important;
 }
-ul.checklist{
+ul.checklist {
   padding-left: 0;
 }
-ul.checklist li{
+ul.checklist li {
   border-bottom: 0.1vw solid #002068;
   padding: 16px 0;
   display: flex;
   align-items: center;
-  color: var(--deep-blue)
+  color: var(--deep-blue);
 }
-ul.checklist.text-white li{
-  color: #FFFFFF;
-  border-bottom-color: #FFFFFF;
+ul.checklist.text-white li {
+  color: #ffffff;
+  border-bottom-color: #ffffff;
 }
-ul.checklist .checklist-icon{
+ul.checklist .checklist-icon {
   margin-right: 16px;
 }
-ul.checklist-no-img li{
+ul.checklist-no-img li {
   font-size: 14px;
   padding: 10px 0;
 }
-.checklist-icon{
+.checklist-icon {
   width: 24px;
+}
+.border-bottom-light-blue {
+  border-bottom: 1px solid #0460a9;
 }
