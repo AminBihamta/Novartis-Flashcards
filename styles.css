@@ -474,6 +474,9 @@ p {
   opacity: 1;
 }
 
+.font-gray {
+  color: var(--cool-gray);
+}
 .font-blue {
   color: var(--deep-blue);
 }
@@ -516,4 +519,15 @@ ul.checklist-no-img li {
 }
 .border-bottom-light-blue {
   border-bottom: 1px solid #0460a9;
+}
+.button-with-icon {
+  background-color: var(--deep-blue);
+  border-radius: 64px;
+  gap: 10px;
+  padding: 0 20px;
+  color: var(--cool-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
 }
