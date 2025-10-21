@@ -531,3 +531,7 @@ ul.checklist-no-img li {
   align-items: center;
   width: fit-content;
 }
+.button-with-icon.bg-white {
+  background-color: var(--cool-gray);
+  color: var(--deep-blue);
+}
