@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page 21</title>
+
+    <link href="tailwind.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+    <script src="footer.js" defer></script>
+    <style>
+      .speech-bubble {
+        position: relative;
+        background: #ffffff;
+        border-radius: 50px;
+        color: var(--deep-blue);
+        font-size: 1rem;
+      }
+      .speech-bubble:after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -10px;
+        width: 0;
+        height: 0;
+        border-top: solid 10px #ffffff;
+        border-left: solid 10px transparent;
+        border-right: solid 10px transparent;
+      }
+      .speech-bubble:hover {
+        background: #ff585d;
+        color: #ffffff;
+      }
+      .speech-bubble:hover:after {
+        border-top: solid 10px #ff585d;
+      }
+      .speech-bubble img {
+        width: 30px;
+      }
+      .pin-south-africa {
+        left: 25vw;
+        top: 65vh;
+      }
+      .pin-australia {
+        right: 17vw;
+        top: 65vh;
+      }
+      .pin-india {
+        right: 40vw;
+        top: 28vh;
+      }
+      .pin-philippines {
+        right: 16vw;
+        top: 28vh;
+      }
+      .pin-malaysia {
+        right: 21vw;
+        top: 34vh;
+      }
+      .pin-singapore {
+        right: 28vw;
+        top: 37vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      style="
+        background-color: #002068;
+        height: 85.5vh;
+        padding: 5vw;
+        gap: 0.5vw;
+      "
+      class="relative"
+    >
+      <img
+        src="./assets/countrymap2.png"
+        class="w-full h-full object-contain object-top absolute left-0 top-0"
+      />
+      <h1
+        class="volta-modern-text m-0 p-0 absolute left-10 top-1/2 transform -translate-y-1/2 z-2"
+        style="color: #f2f2f4; font-weight: 400 !important"
+      >
+        Case Studies
+      </h1>
+      <a href="page-35.html" class="absolute pin-south-africa">
+        <button
+          class="speech-bubble text-white px-6 py-2 font-medium duration-200 flex gap-2"
+        >
+          <img src="./assets/SouthAfrica.png" /><span>South Africa</span>
+        </button>
+      </a>
+      <a href="page-25.html" class="absolute pin-australia">
+        <button
+          class="speech-bubble text-white px-6 py-2 font-medium duration-200 flex gap-2"
+        >
+          <img src="./assets/AUS.png" /><span>Australia</span>
+        </button>
+      </a>
+      <a href="page-22.html" class="absolute pin-india">
+        <button
+          class="speech-bubble text-white px-6 py-2 font-medium duration-200 flex gap-2"
+        >
+          <img src="./assets/India.png" /><span>India</span>
+        </button>
+      </a>
+      <a href="page-31.html" class="absolute pin-philippines">
+        <button
+          class="speech-bubble text-white px-6 py-2 font-medium duration-200 flex gap-2"
+        >
+          <img src="./assets/Philippines.png" /><span>Philippines</span>
+        </button>
+      </a>
+      <a href="page-27.html" class="absolute pin-malaysia">
+        <button
+          class="speech-bubble text-white px-6 py-2 font-medium duration-200 flex gap-2"
+        >
+          <img src="./assets/Malaysia.png" /><span>Malaysia</span>
+        </button>
+      </a>
+      <a href="page-29.html" class="absolute pin-singapore">
+        <button
+          class="speech-bubble text-white px-6 py-2 font-medium duration-200 flex gap-2"
+        >
+          <img src="./assets/Singapore.png" /><span>Singapore</span>
+        </button>
+      </a>
+    </div>
+    <site-footer
+      style="position: relative; z-index: 100"
+      next-text="Next (India)"
+      next-href="page-22.html"
+    ></site-footer>
+  </body>
+</html>
