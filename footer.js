@@ -36,7 +36,7 @@ class SiteFooter extends HTMLElement {
           country legal team as early as possible in the planning stage to ensure
           the models discussed are legally allowed and feasible in your country.
         </p>
-      <a class="home-button">
+      <a class="home-button" href="Click To Start.html">
         <svg
           width="53"
           height="53"
