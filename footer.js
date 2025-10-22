@@ -18,7 +18,7 @@ class SiteFooter extends HTMLElement {
 
     this.innerHTML = `
       <footer
-        style="padding: 3vw; border-top: 1px solid #002068; gap: 1vw; z-index: 100; !important"
+        style="padding: 2vw; border-top: 1px solid #002068; gap: 1vw; z-index: 100; !important"
         class="w-full text-center flex flex-row justify-evenly items-center"
       >
         <p
@@ -36,7 +36,28 @@ class SiteFooter extends HTMLElement {
           country legal team as early as possible in the planning stage to ensure
           the models discussed are legally allowed and feasible in your country.
         </p>
-
+      <a class="home-button">
+        <svg
+          width="53"
+          height="53"
+          viewBox="0 0 53 53"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            x="0.5"
+            y="0.5"
+            width="52"
+            height="52"
+            rx="26"
+            stroke="#002068"
+          />
+          <path
+            d="M16.6667 37.9904H22.82V28.1837H30.5133V37.9904H36.6667V22.9904L26.6667 15.4271L16.6667 22.9904V37.9904ZM15 39.6571V22.1571L26.6667 13.3438L38.3333 22.1571V39.6571H28.8467V29.8504H24.4867V39.6571H15Z"
+            fill="#002068"
+          />
+        </svg>
+      </a>
 
         <button type="button" onclick="history.back()" aria-label="Go back" class="flex" style="gap: 0.5vw">
           <svg width="1.7vw" height="1.7vw" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">

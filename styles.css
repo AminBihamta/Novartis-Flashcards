@@ -663,6 +663,7 @@ p {
   padding: 0;
   margin: 0;
   opacity: 0;
+}
 .font-gray {
   color: var(--cool-gray);
 }
@@ -724,3 +725,16 @@ ul.checklist-no-img li {
   background-color: var(--cool-gray);
   color: var(--deep-blue);
 }
+
+.home-button,
+.home-button svg {
+  width: 2vw;
+  flex-shrink: 0;
+  height: 2vw;
+  cursor: pointer;
+}
+/* 
+.home-button:hover {
+  background-color: #002068;
+  border-radius: 60vw;
+} */
