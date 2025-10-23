@@ -702,8 +702,8 @@ ul.checklist .checklist-icon {
   margin-right: 16px;
 }
 ul.checklist-no-img li {
-  font-size: 14px;
-  padding: 10px 0;
+  font-size: 1vw;
+  padding: 0.8vw 0;
 }
 .checklist-icon {
   width: 1.5vw;
@@ -713,10 +713,11 @@ ul.checklist-no-img li {
 }
 .button-with-icon {
   background-color: var(--deep-blue);
-  border-radius: 64px;
-  gap: 10px;
-  padding: 0 20px;
+  border-radius: 3vw;
+  gap: 0.5vw;
+  padding: 0.3vw 1vw;
   color: var(--cool-gray);
+  font-size: 0.95vw;
   display: flex;
   justify-content: center;
   align-items: center;
