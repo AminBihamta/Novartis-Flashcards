@@ -676,9 +676,9 @@ p {
 h3.col-header {
   font-family: Volta Modern Text;
   font-weight: 700;
-  font-size: 1.5vw;
+  font-size: 1.7vw;
   line-height: 100%;
-  margin-left: 40px;
+  margin-left: 2vw;
 }
 .col-header-no-img {
   margin-left: 0 !important;
@@ -692,21 +692,21 @@ ul.checklist li {
   display: flex;
   align-items: center;
   color: var(--deep-blue);
-  font-size: 1.1vw;
+  font-size: 1.6vw;
 }
 ul.checklist.text-white li {
   color: #ffffff;
   border-bottom-color: #ffffff;
 }
 ul.checklist .checklist-icon {
-  margin-right: 16px;
+  margin-right: 1vw;
 }
 ul.checklist-no-img li {
   font-size: 1vw;
   padding: 0.8vw 0;
 }
 .checklist-icon {
-  width: 1.5vw;
+  width: 1.7vw;
 }
 .border-bottom-light-blue {
   border-bottom: 1px solid #0460a9;
