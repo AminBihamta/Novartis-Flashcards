@@ -27,7 +27,7 @@ class SiteFooter extends HTMLElement {
         >
           ${titleText}
         </p>
-        <svg width="1" height="42" viewBox="0 0 1 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="1vw" height="4vw" viewBox="0 0 1 42" fill="none" xmlns="http://www.w3.org/2000/svg">
           <line x1="0.5" y1="0" x2="0.500002" y2="42" stroke="#002068" />
         </svg>
         <p class="text-left" style="color: #002068; font-size: 0.7vw; max-width: 46vw">
@@ -38,8 +38,9 @@ class SiteFooter extends HTMLElement {
         </p>
       <a class="home-button" href="Click To Start.html">
         <svg
-          width="53"
-          height="53"
+          width="2vw" 
+          height="2vw" 
+          style="flex-shrink: 0"
           viewBox="0 0 53 53"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -69,7 +70,7 @@ class SiteFooter extends HTMLElement {
 
         <a class="rounded-full flex items-center next-page-button" href="${nextHref}">
           ${nextText}
-          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="2vw" height="2vw" style="flex-shrink: 0" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M9 7.5L12.5 11L9 14.5" stroke="#002068" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
             <path d="M22 11C22 17.0751 17.0751 22 11 22C4.92487 22 0 17.0751 0 11C0 4.92487 4.92487 0 11 0C17.0751 0 22 4.92487 22 11ZM1.496 11C1.496 16.2489 5.75109 20.504 11 20.504C16.2489 20.504 20.504 16.2489 20.504 11C20.504 5.75109 16.2489 1.496 11 1.496C5.75109 1.496 1.496 5.75109 1.496 11Z" fill="#002068" />
           </svg>

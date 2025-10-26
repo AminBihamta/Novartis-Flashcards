@@ -27,9 +27,11 @@ class SiteFooter extends HTMLElement {
         >
           ${titleText}
         </p>
-        <svg width="1" height="42" viewBox="0 0 1 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <line x1="0.5" y1="0" x2="0.500002" y2="42" stroke="#002068" />
-        </svg>
+
+        <svg width="1vw" height="4vw" viewBox="0 0 1 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="0.5" y1="-2.18558e-08" x2="0.500002" y2="42" stroke="#F2F2F4"/>
+</svg>
+
         <p class="text-left" style="color: #002068; font-size: 0.7vw; max-width: 46vw">
           <b>Legal Disclaimer:</b> This document is provided for your guidance
           reflecting our experiences in multiple jurisdictions. Please engage your
@@ -38,9 +40,9 @@ class SiteFooter extends HTMLElement {
         </p>
 <a class="home-button" href="Click To Start.html">
         <svg
-          width="53"
-          height="53"
-          viewBox="0 0 53 53"
+width="2vw" 
+height="2vw" 
+style="flex-shrink: 0"          viewBox="0 0 53 53"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -72,7 +74,7 @@ class SiteFooter extends HTMLElement {
 
         <a class="rounded-full flex items-center next-page-button" href="${nextHref}">
           ${nextText}
-          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="2vw" height="2vw" style="flex-shrink: 0" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M10 7.5L13.5 11L10 14.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M11 21C16.523 21 21 16.523 21 11C21 5.477 16.523 1 11 1C5.477 1 1 5.477 1 11C1 16.523 5.477 21 11 21Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
